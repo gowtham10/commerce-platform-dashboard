@@ -1,0 +1,50 @@
+{
+  "navItems": [
+    {
+      "displayName": "Dashboard",
+      "path": "/",
+      "icon": "ChartBarIcon"
+    },
+    {
+      "displayName": "Sales",
+      "path": "/sales/overview",
+      "icon": "CircleStackIcon",
+      "subItems": [
+        {
+          "displayName": "Overview",
+          "path": "/sales/overview",
+          "icon": "DocumentMagnifyingGlassIcon"
+        },
+        {
+          "displayName": "Orders",
+          "path": "/sales/orders",
+          "icon": "CloudIcon"
+        }
+      ]
+    },
+    {
+      "displayName": "Customers",
+      "path": "/customers/overview",
+      "icon": "UsersIcon",
+      "subItems": [
+        {
+          "displayName": "Overview",
+          "path": "/customers/overview",
+          "icon": "DocumentMagnifyingGlassIcon"
+        }
+      ]
+    },
+    {
+      "displayName": "Products",
+      "path": "/products/overview",
+      "icon": "ScaleIcon",
+      "subItems": [
+        {
+          "displayName": "Overview",
+          "path": "/products/overview",
+          "icon": "DocumentMagnifyingGlassIcon"
+        }
+      ]
+    }
+  ]
+}

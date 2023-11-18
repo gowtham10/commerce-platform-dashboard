@@ -25,6 +25,7 @@ export function NavMenu(props: NavProps) {
         displayName={displayName}
         isParentItem={isParent}
         isExpanded={isExpanded}
+        isSelected={pathName === path}
       >
         {subItemsHtml}
       </NavItem>

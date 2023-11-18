@@ -24,13 +24,13 @@
     },
     {
       "displayName": "Customers",
-      "path": "/customers/overview",
+      "path": "/customers/analytics",
       "icon": "UsersIcon",
       "subItems": [
         {
-          "displayName": "Overview",
-          "path": "/customers/overview",
-          "icon": "DocumentMagnifyingGlassIcon"
+          "displayName": "Analytics",
+          "path": "/customers/analytics",
+          "icon": "ArrowTrendingUpIcon"
         }
       ]
     },

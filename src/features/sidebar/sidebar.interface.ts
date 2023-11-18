@@ -9,6 +9,7 @@ export type NavItemProps = NavItemType & {
   isParentItem?: boolean;
   isExpanded?: boolean;
   children: React.JSX.Element | null;
+  isSelected?: boolean;
 }
 
 export type NavMenuType = NavItemType & {

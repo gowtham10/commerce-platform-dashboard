@@ -1,13 +1,9 @@
 import "./globals.scss";
 import styles from "./layout.module.scss";
-// import "@fortawesome/fontawesome-svg-core/styles.css";
-// import { config } from "@fortawesome/fontawesome-svg-core";
 import Sidebar from "@/features/sidebar";
 import { readJsonFile } from "./shared/file-helper";
 import { MockFileNames } from "@/constants";
 import 'react-loading-skeleton/dist/skeleton.css';
-
-// config.autoAddCss = false;
 
 export const metadata = {
   title: "E-Commerce Dashboard",
@@ -17,7 +13,7 @@ export const metadata = {
 export default async function RootLayout(
   { children }: { children: React.ReactNode },
 ) {
-  const mockData  = await readJsonFile(MockFileNames.NAVIGATION) as {navItems: any};
+  const mockData  = await readJsonFile(MockFileNames.NAVIGATION_WITH_ONE_NESTING) as {navItems: any};
   return (
     <html lang="en">
       <meta name="theme-color" content="#ffffff" />

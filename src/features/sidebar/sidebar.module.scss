@@ -7,14 +7,78 @@
 
   &__company {
     flex: 1;
+    padding: 1rem;
+  }
+
+   &__company-header {
+    display: flex;
+    padding-top: 1rem;
+  }
+
+  &__company-logo {
+    color: #FFC42A;
+  }
+
+  &__company-name {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #535353;
+    font-weight: bold;
+
   }
 
   &__nav {
     flex: 4;
+    padding: 1rem;
+  }
+
+  &__nav-item {
+    padding: 1rem 0;
+
+    & > ul {
+      padding-left: 1rem;
+    }
+  }
+
+  &__nav-link {
+    display: flex;
+
+    & > span {
+      flex: 1;
+      padding-left: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+    }
+
+    &:hover {
+      color: #FFC42A;
+    }
+  }
+
+  &__nav-link__active {
+    color: #FFC42A;
+    font-weight: bold;
   }
 
   &__profile {
     flex: 1;
+    padding: 1rem;
+    border-top: 1px solid #F7F7F7;
+  }
+
+  &__profile-container {
+    display: flex;
+    padding-top: 0.25rem;
+  }
+
+  &__profile-name {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
   }
 
 }

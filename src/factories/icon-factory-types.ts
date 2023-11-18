@@ -3,6 +3,7 @@ export type DefaultIconTypeProps = {
   width?: number;
   height?: number;
   size?: number;
+  iconClass?: string;
 };
 
 export type IconFactoryTypes = DefaultIconTypeProps;

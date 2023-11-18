@@ -1,0 +1,31 @@
+{
+  "navItems": [
+    {
+      "displayName": "Dashboard",
+      "path": "/",
+      "icon": "ChartBarIcon"
+    },
+    {
+      "displayName": "Sales",
+      "path": "/sales/overview",
+      "icon": "CircleStackIcon"
+    },
+    {
+      "displayName": "Products",
+      "path": "/products/overview",
+      "icon": "ScaleIcon"
+    },
+    {
+      "displayName": "Customers",
+      "path": "/customers/analytics",
+      "icon": "UsersIcon",
+      "subItems": [
+        {
+          "displayName": "Analytics",
+          "path": "/customers/analytics",
+          "icon": "ArrowTrendingUpIcon"
+        }
+      ]
+    }
+  ]
+}

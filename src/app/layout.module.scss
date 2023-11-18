@@ -1,12 +1,16 @@
 .aside {
-  flex: 1;
-  background-color: green;
+  flex: 2;
+  background-color: #fff;
+  height: 100%;
+  color: #D1D1D1;
 }
 
 .content {
-  flex: 5;
-  background: #fff;
+  flex: 10;
+  background: #F7F7F7;
   height: 100%;
   overflow-y: auto;
+  padding: 1rem;
+  color: #000;
 }
 

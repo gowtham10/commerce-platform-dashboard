@@ -4,8 +4,12 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 export function Profile() {
   return (
     <section className={styles["sidebar__profile"]}>
-      <UserCircleIcon width={30} height={30} />
-      <span>John Doe</span>
+      <div className={styles["sidebar__profile-container"]}>
+        <UserCircleIcon width={35} height={35} />
+        <span className={styles["sidebar__profile-name"]}>
+          John Doe
+        </span>
+      </div>
     </section>
   );
 }

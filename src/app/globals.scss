@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -95,6 +97,8 @@ body {
     rgb(var(--background-start-rgb));
   display: flex;
   height: 100vh;
+  font-family: 'DM Sans', Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 }
 
 a {
@@ -106,4 +110,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+ul, li {
+  list-style: none;
 }

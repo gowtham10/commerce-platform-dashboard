@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { HomeIcon } from "@heroicons/react/24/outline";
 import { DatePicker } from "@/components/date-picker";
 import { TableSkeleton } from "@/components/table/table-skeleton";
-import { NoFilterTable } from "@/components";
+import { NoFilterTable } from "@/components/table/no-filter.table";
 
 export default function Dashboard() {
   return (

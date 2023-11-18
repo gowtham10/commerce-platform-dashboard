@@ -5,6 +5,8 @@ import styles from "./layout.module.scss";
 import Sidebar from "@/features/sidebar";
 import { readJsonFile } from "./shared/file-helper";
 import { MockFileNames } from "@/constants";
+import 'react-loading-skeleton/dist/skeleton.css';
+
 // config.autoAddCss = false;
 
 export const metadata = {

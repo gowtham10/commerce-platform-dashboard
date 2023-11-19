@@ -1,3 +1,5 @@
+import { MetricDetails } from "@/features/dashboard/dashboard.interface";
+
 export type DefaultIconTypeProps = {
   color?: string;
   width?: number;
@@ -8,3 +10,4 @@ export type DefaultIconTypeProps = {
 
 export type IconFactoryTypes = DefaultIconTypeProps;
 
+export type ComponentFactoryProps = MetricDetails;

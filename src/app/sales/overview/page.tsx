@@ -1,8 +1,5 @@
-export default function SalesOverview() {
-  return (
-    <section>
-      <h3>Sales overview coming soon...</h3>
-    </section>
-  );
-}
+import { SalesOverview } from "@/features/sales";
 
+export default function SalesPage() {
+  return <SalesOverview />;
+}

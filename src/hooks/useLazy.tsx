@@ -2,7 +2,7 @@ import dynamic, { DynamicOptions } from 'next/dynamic';
 import { useMemo } from "react";
 import {DynamicLoaderType, getDynamicLoader} from "@/utils/loaders";
 
-export default function useLazy<P,>(
+export default function useLazy<P>(
   dynamicLoaderKey: string,
   key: string,
   ssr = false,

@@ -1,7 +1,7 @@
-import { RequestType } from "@/components/charts/charts.interface";
+import { RequestType } from "@/components/common.interface";
 import { FetcherArgs } from "./http.helper";
 
-export const constructSWRKey = <F, P>(filters: F, request: RequestType<P>): FetcherArgs  => {
+export const constructSWRKey = <F>(filters: F, request: RequestType): FetcherArgs  => {
   const { path, method = "GET", payload = {}, headers = {} } = request;
 
   return [path, {

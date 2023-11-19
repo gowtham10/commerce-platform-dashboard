@@ -11,16 +11,15 @@ export interface SimpleBarChartData {
   value: number;
 }
 
-interface ChartCommonProps<F, P> {
+interface ChartCommonProps<F> {
   filters?: F;
-  request?: RequestType<P>;
-  chartName?: string;
+  request?: RequestType;
 }
 
-export type TinyBarChartProps<F, P> = ChartCommonProps<F, P> & {
+export type TinyBarChartProps<F> = ChartCommonProps<F> & {
   data?: TinyBarChartData[];
 };
 
-export type SimpleBarChartProps<F, P> = ChartCommonProps<F, P> & {
+export type SimpleBarChartProps<F> = ChartCommonProps<F> & {
   data?: SimpleBarChartData[];
 }

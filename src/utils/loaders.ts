@@ -10,6 +10,11 @@ export const getDynamicLoader = (key: string): DynamicLoaderType => {
         import("@heroicons/react/24/outline").then((
           m,
         ) => (m[k] ? m[k] : ExclamationTriangleIcon));
+    case DynamicLoaderKeys.COMPONENTS:
+          return (k: string) => () =>
+        import("@/components").then((
+          m,
+        ) => (m[k] ? m[k] : null));
     default:
       return (k: string) => () =>
         import("@heroicons/react/24/outline").then((

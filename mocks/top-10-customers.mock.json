@@ -1,0 +1,41 @@
+{
+    "headers": [
+      {
+        "key": "productCode",
+        "title": "Product Code"
+      },
+      {
+        "key": "name",
+        "title": "Product Name"
+      },
+      {
+        "key": "totalProductsSold",
+        "title": "Total Products Sold"
+      },
+      {
+        "key": "totalRevenue",
+        "title": "Total Revenue"
+      }
+    ],
+    "content": [
+      {
+        "productCode": "P0001",
+        "name": "iPhone 15",
+        "totalProductsSold": 100,
+        "totalRevenue": "₹200000"
+      },
+      {
+        "productCode": "P1006",
+        "name": "Samsung Galaxy S20",
+        "totalProductsSold": 200,
+        "totalRevenue": "₹150000"
+      },
+      {
+        "productCode": "P3301",
+        "name": "OnePlus 8",
+        "totalProductsSold": 400,
+        "totalRevenue": "₹100000"
+      }
+    ]
+}
+

@@ -6,7 +6,7 @@ export function Company() {
     <section className={styles["sidebar__company"]}>
       <h2 className={styles["sidebar__company-header"]}>
         <CubeTransparentIcon className={styles["sidebar__company-logo"]} width={40} height={40} />
-        <span className={styles["sidebar__company-name"]}>Anchor</span>
+        <span className={styles["sidebar__company-name"]}>OneStop</span>
       </h2>
     </section>
   );

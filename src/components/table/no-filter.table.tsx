@@ -10,13 +10,13 @@ import {
 } from "@tanstack/react-table";
 import { ReactTable } from "./react-table";
 
-export function NoFilterTable<F, P>(props: TableProps<F, P>) {
-  const { data: tableData, request, filters, tableName = "Sample Table" } =
+export function NoFilterTable<F>(props: TableProps<F>) {
+  const { data: tableData, request, filters } =
     props;
 
   const { data } = useSWR(
     !tableData
-      ? constructSWRKey<F, P>(filters as F, request as RequestType<P>)
+      ? constructSWRKey<F>(filters as F, request as RequestType)
       : null,
     postFetcher,
   );
@@ -28,7 +28,7 @@ export function NoFilterTable<F, P>(props: TableProps<F, P>) {
   const columnHelper = createColumnHelper<any>();
   const { content, headers } = tableData || data;
 
-  const columns = headers.map((header: TableHeader) => {
+  const columns = headers?.map((header: TableHeader) => {
     const { key, title } = header;
     return columnHelper.accessor(key, {
       header: () => <span>{title}</span>,
@@ -37,7 +37,6 @@ export function NoFilterTable<F, P>(props: TableProps<F, P>) {
 
   return (
     <>
-      <span>{tableName}</span>
       <ReactTable data={content} columns={columns} />
     </>
   );

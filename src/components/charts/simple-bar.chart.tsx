@@ -18,14 +18,12 @@ import useSWR from "swr";
 import { constructSWRKey, postFetcher } from "@/helpers";
 import { RequestType } from "../common.interface";
 
-export function SimpleBarChart<F, P>(props: SimpleBarChartProps<F, P>) {
-  const { data: chartData, request, filters, chartName = 'Sample Simple Bar' } = props;
-
-  console.log(chartData, "chartData");
+export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
+  const { data: chartData, request, filters } = props;
 
   const { data } = useSWR(
     !chartData
-      ? constructSWRKey<F, P>(filters as F, request as RequestType<P>)
+      ? constructSWRKey<F>(filters as F, request as RequestType)
       : null,
     postFetcher,
   );
@@ -36,7 +34,6 @@ export function SimpleBarChart<F, P>(props: SimpleBarChartProps<F, P>) {
 
   return (
     <>
-      <span>{chartName}</span>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}

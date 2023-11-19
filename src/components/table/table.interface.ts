@@ -1,9 +1,8 @@
 import { RequestType } from "../common.interface";
 
-type CommonTableProps<F, P> = {
+type CommonTableProps<F> = {
   filters?: F;
-  request?: RequestType<P>;
-  tableName?: string;
+  request?: RequestType;
 };
 
 export interface TableHeader {
@@ -16,6 +15,6 @@ export interface TableData {
   headers: TableHeader[];
 }
 
-export type TableProps<F, P> = CommonTableProps<F, P> & {
+export type TableProps<F> = CommonTableProps<F> & {
   data: TableData;
 };

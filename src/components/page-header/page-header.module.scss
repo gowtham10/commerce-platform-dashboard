@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+
+  & > h2 {
+    color: #535353;
+    flex: 1;
+    padding-top: 0.35rem;
+  }
+}

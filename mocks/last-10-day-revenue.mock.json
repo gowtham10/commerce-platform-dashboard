@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "xAxisName": "01/11/2023",
+      "value": 120
+    },
+    {
+      "xAxisName": "02/11/2023",
+      "value": 140
+    },
+    {
+      "xAxisName": "03/11/2023",
+      "value": 80
+    },
+    {
+      "xAxisName": "04/11/2023",
+      "value": 200
+    },
+    {
+      "xAxisName": "05/11/2023",
+      "value": 180
+    },
+    {
+      "xAxisName": "06/11/2023",
+      "value": 300
+    },
+    {
+      "xAxisName": "07/11/2023",
+      "value": 340
+    },
+    {
+      "xAxisName": "08/11/2023",
+      "value": 190
+    },
+    {
+      "xAxisName": "09/11/2023",
+      "value": 170
+    },
+    {
+      "xAxisName": "10/11/2023",
+      "value": 100
+    }
+  ]
+}

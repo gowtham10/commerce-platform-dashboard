@@ -1,0 +1,101 @@
+{
+  "allMetricKeys": [
+    "HOURLY_SALES_TREND",
+    "LAST_10DAYS_REVENUE",
+    "TOP_10_PRODUCTS",
+    "TOP_10_CUSTOMERS",
+    "RECENT_ORDERS"
+  ],
+  "enabledMetricKeys": [
+    "LAST_10DAYS_REVENUE",
+    "TOP_10_PRODUCTS",
+    "TOP_10_CUSTOMERS",
+    "RECENT_ORDERS"
+  ],
+  "metricDetails": [
+    {
+      "key": "HOURLY_SALES_TREND",
+      "name": "Hourly Sales Trend",
+      "description": "Hourly Sales Trend",
+      "type": "LINE_CHART",
+      "redirectUrl": "/sales/overview",
+      "request": {
+        "path": "/v1/sales",
+        "method": "POST",
+        "polling": "SSE",
+        "payload": {
+          "type": "SALES_TREND"
+        }
+      }
+    },
+    {
+      "key": "LAST_10DAYS_REVENUE",
+      "name": "Revenue (Last 10 Days)",
+      "description": "Last 10 Days Revenue",
+      "type": "TINY_BAR_CHART",
+      "redirectUrl": "/sales/overview",
+      "request": {
+        "path": "/v1/sales",
+        "method": "POST",
+        "payload": {
+          "type": "LAST_10DAYS_REVENUE"
+        }
+      }
+    },
+    {
+      "key": "TOP_10_PRODUCTS",
+      "name": "Top 10 Products (Last 10 Days)",
+      "description": "Top 10 selling products in last 10 days",
+      "type": "NO_FILTER_TABLE",
+      "redirectUrl": "/products/overview",
+      "request": {
+        "path": "/v1/products",
+        "method": "POST",
+        "payload": {
+          "type": "REVENUE",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0,
+          "startDate": "01-11-2023",
+          "endDate": "10-11-2023"
+        }
+      }
+    },
+    {
+      "key": "TOP_10_CUSTOMERS",
+      "name": "Top 10 Customers (Last 10 Days)",
+      "description": "Top 10 high spending customers in the last 10 days",
+      "type": "NO_FILTER_TABLE",
+      "redirectUrl": "/customers/analytics",
+      "request": {
+        "path": "/v1/customers",
+        "method": "POST",
+        "payload": {
+          "type": "SPENDING",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0,
+          "startDate": "01-11-2023",
+          "endDate": "10-11-2023"
+        }
+      }
+    },
+    {
+      "key": "RECENT_ORDERS",
+      "name": "Recent Orders",
+      "description": "Recent Orders",
+      "type": "NO_FILTER_TABLE",
+      "redirectUrl": "/sales/overview",
+      "request": {
+        "path": "/v1/products",
+        "method": "POST",
+        "payload": {
+          "type": "ORDERS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    }
+  ]
+}

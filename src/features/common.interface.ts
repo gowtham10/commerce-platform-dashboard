@@ -11,6 +11,4 @@ export interface MetricDetails {
   key?: string;
 }
 
-export type MetricContainerProps = MetricDetails;
-
-
+export type MetricContainerProps = MetricDetails & { filters?: any };

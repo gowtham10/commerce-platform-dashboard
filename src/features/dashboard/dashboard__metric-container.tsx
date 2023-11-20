@@ -1,11 +1,11 @@
 "use client";
 import { ComponentFactory } from "@/factories/component-factory";
 import styles from "./dashboard.module.scss";
-import { MetricContainerProps } from "./dashboard.interface";
 import { useRouter } from "next/navigation";
+import { MetricContainerProps } from "../common.interface";
 
 export function MetricContainer(props: MetricContainerProps) {
-  const { redirectUrl, name, type, request, data } = props;
+  const { redirectUrl, name, type, request, data, filters } = props;
   const router = useRouter();
 
   const handleClick = () => {
@@ -21,6 +21,7 @@ export function MetricContainer(props: MetricContainerProps) {
         type={type}
         request={request}
         data={data}
+        filters={filters}
       />
     </div>
   );

@@ -3,34 +3,31 @@ import { ComponentTypeKeys } from "@/constants";
 import { ComponentFactoryProps } from "./factory.interface";
 
 export function ComponentFactory(props: ComponentFactoryProps) {
-  const { type, name, description, data, request } = props;
+  const { type, data, request, filters } = props;
 
   switch (type) {
     case ComponentTypeKeys.TINY_BAR_CHART:
       return (
         <TinyBarChart
           data={data}
-          description={description}
           request={request}
-          chartName={name}
+          filters={filters}
         />
       );
     case ComponentTypeKeys.SIMPLE_BAR_CHART:
       return (
         <SimpleBarChart
           data={data}
-          description={description}
           request={request}
-          chartName={name}
+          filters={filters}
         />
       );
     case ComponentTypeKeys.NO_FILTER_TABLE:
       return (
         <NoFilterTable
           data={data}
-          description={description}
           request={request}
-          tableName={name}
+          filters={filters}
         />
       );
     case ComponentTypeKeys.PIE_CHART:

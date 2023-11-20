@@ -1,0 +1,31 @@
+.picker {
+  & span {
+    color: #535353;
+  }
+
+  & input {
+    background: #FFF;
+    color: #535353;
+  }
+
+  &__container {
+    position: absolute;
+    top: 32px;
+    z-index: 9999;
+    right: 0;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+
+  &__date-range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}

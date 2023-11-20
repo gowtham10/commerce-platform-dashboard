@@ -4,7 +4,7 @@ import { MetricDetails } from "../common.interface";
 type DashboardMetricDetails = MetricDetails & { key: string };
 
 export interface DashboardProps {
-  allMetricKeys: string[];
+  allMetricOptions: any;
   enabledMetricKeys: string[];
   metricDetails: DashboardMetricDetails[];
   cards?: CardProps;

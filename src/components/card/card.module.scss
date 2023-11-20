@@ -7,13 +7,13 @@
   cursor: pointer;
   background: #fff;
   border-radius: 16px;
-  width: 300px;
+  width: 375px;
   height: 125px;
   display: flex;
 
   &__skeleton {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
   }
 
@@ -44,7 +44,7 @@
 
   &__title {
     color: #D1D1D1;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 
@@ -66,4 +66,13 @@
     color: #D1D1D1;
     font-size: 0.85rem;
   }
+}
+
+.skeleton-container {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 16px;
+  width: 375px;
+  height: 125px;
+  display: flex;
 }

@@ -10,4 +10,4 @@ export type DefaultIconTypeProps = {
 
 export type IconFactoryTypes = DefaultIconTypeProps;
 
-export type ComponentFactoryProps = MetricDetails;
+export type ComponentFactoryProps = MetricDetails & {filters?: any};

@@ -1,17 +1,25 @@
 {
   "allMetricKeys": [
     "HOURLY_SALES_TREND",
-    "LAST_10DAYS_REVENUE",
+    "LAST_10_DAYS_REVENUE",
     "TOP_10_PRODUCTS",
     "TOP_10_CUSTOMERS",
     "RECENT_ORDERS"
   ],
   "enabledMetricKeys": [
-    "LAST_10DAYS_REVENUE",
+    "LAST_10_DAYS_REVENUE",
     "TOP_10_PRODUCTS",
     "TOP_10_CUSTOMERS",
     "RECENT_ORDERS"
   ],
+  "cards": {
+    "request": {
+      "path": "/v1/dashboard/cards",
+      "method": "POST",
+      "payload": {
+       }
+    }
+  },
   "metricDetails": [
     {
       "key": "HOURLY_SALES_TREND",
@@ -29,7 +37,7 @@
       }
     },
     {
-      "key": "LAST_10DAYS_REVENUE",
+      "key": "LAST_10_DAYS_REVENUE",
       "name": "Revenue (Last 10 Days)",
       "description": "Last 10 Days Revenue",
       "type": "TINY_BAR_CHART",
@@ -38,7 +46,7 @@
         "path": "/v1/sales",
         "method": "POST",
         "payload": {
-          "type": "LAST_10DAYS_REVENUE"
+          "type": "LAST_10_DAYS_REVENUE"
         }
       }
     },
@@ -52,7 +60,7 @@
         "path": "/v1/products",
         "method": "POST",
         "payload": {
-          "type": "REVENUE",
+          "type": "TOP_PRODUCTS",
           "order": "DESC",
           "limit": 10,
           "offset": 0,
@@ -71,7 +79,7 @@
         "path": "/v1/customers",
         "method": "POST",
         "payload": {
-          "type": "SPENDING",
+          "type": "TOP_PRODUCTS",
           "order": "DESC",
           "limit": 10,
           "offset": 0,
@@ -90,7 +98,7 @@
         "path": "/v1/products",
         "method": "POST",
         "payload": {
-          "type": "ORDERS",
+          "type": "TOP_PRODUCTS",
           "order": "DESC",
           "limit": 10,
           "offset": 0

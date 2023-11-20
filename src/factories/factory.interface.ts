@@ -1,4 +1,4 @@
-import { MetricDetails } from "@/features/dashboard/dashboard.interface";
+import { MetricDetails } from "@/features/common.interface";
 
 export type DefaultIconTypeProps = {
   color?: string;

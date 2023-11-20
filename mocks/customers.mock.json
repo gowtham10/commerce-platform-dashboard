@@ -1,0 +1,27 @@
+{
+  "cards": {
+    "request": {
+      "path": "/v1/sales",
+      "method": "POST",
+      "payload": {
+        "type": "SALES_CARDS"
+      }
+    }
+  },
+  "metricDetails": [
+    {
+      "key": "LAST_10_DAYS_REVENUE",
+      "name": "Revenue & Profit",
+      "description": "",
+      "type": "SIMPLE_BAR_CHART",
+      "request": {
+        "path": "/v1/sales",
+        "method": "POST",
+        "payload": {
+          "type": "SALES_REVENUE_PROFIT"
+        }
+      }
+    }
+  ]
+}
+

@@ -1,3 +1,4 @@
+import { MockFileNames } from '@/constants';
 import { promises as fs } from 'fs';
 
 export async function readJsonFile(fileName: string) {
@@ -14,3 +15,4 @@ export async function readJsonFile(fileName: string) {
 
   return data;
 }
+

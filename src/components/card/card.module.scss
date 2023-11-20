@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 16px;
+  width: 300px;
+  height: 125px;
+  display: flex;
+
+  &__skeleton {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    min-width: 107px;
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      justify-content: center;
+    }
+  }
+
+  &__value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #535353;
+  }
+
+  &__title {
+    color: #D1D1D1;
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  &__compare-container {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+  }
+
+  &__compare__up {
+    color: #34C636;
+  }
+
+  &__compare__down {
+    color: #FF5252;
+  }
+
+  &__compare-description {
+    color: #D1D1D1;
+    font-size: 0.85rem;
+  }
+}

@@ -1,14 +1,5 @@
-import { RequestType } from "@/components/common.interface";
-import { ComponentTypeKeys } from "@/constants";
-
-export interface MetricDetails {
-  name?: string;
-  description?: string;
-  type: ComponentTypeKeys;
-  request?: RequestType;
-  data?: any;
-  redirectUrl?: string;
-}
+import { CardProps } from "@/components/card/card.interface";
+import { MetricDetails } from "../common.interface";
 
 type DashboardMetricDetails = MetricDetails & { key: string };
 
@@ -16,6 +7,6 @@ export interface DashboardProps {
   allMetricKeys: string[];
   enabledMetricKeys: string[];
   metricDetails: DashboardMetricDetails[];
+  cards?: CardProps;
 }
 
-export type MetricContainerProps = MetricDetails;

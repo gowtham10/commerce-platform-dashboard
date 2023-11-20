@@ -1,12 +1,6 @@
 "use client";
 import Skeleton from "react-loading-skeleton";
 import styles from "./table-skeleton.module.scss";
-import {
-  createColumnHelper,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
 
 export function TableSkeleton() {
   const dummyData = Array(5).fill(null);

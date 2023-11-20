@@ -1,5 +1,9 @@
+import { readJsonFile } from "@/app/shared/file-helper";
+import { MockFileNames } from "@/constants";
 import { SalesOverview } from "@/features/sales";
 
-export default function SalesPage() {
-  return <SalesOverview />;
+export default async function SalesPage() {
+    const mockData = await readJsonFile(MockFileNames.SALES_META) as any;
+
+  return <SalesOverview {...mockData}/>;
 }

@@ -1,15 +1,30 @@
 .table {
-  border: 1px solid lightgray;
 
-  & tbody {
-    border-bottom: 1px solid lightgray;
+  margin: 0 1rem;
+  border-collapse: collapse;
+
+  & thead {
+    font-size: 0.85rem;
+    color: #535353;
   }
 
   & th {
-    border-bottom: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-    padding: 2px 4px;
+    letter-spacing: 2px;
+    padding: 0rem 0.5rem 0.75rem;
   }
+  & td {
+    letter-spacing: 1px;
+    padding: 0.5rem 0.5rem 0.5rem;
+  }
+  & tbody {
+    td {
+      text-align: center;
+    }
+    tr:nth-child(odd) {
+      background-color: #eee;
+    }
+  }
+
 }
 
 

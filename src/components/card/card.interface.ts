@@ -17,5 +17,6 @@ export interface CardProps {
   request?: RequestType;
   data?: CardData[];
   filters?: any;
+  skeletonCount?: number;
 }
 

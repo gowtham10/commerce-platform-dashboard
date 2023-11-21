@@ -7,7 +7,7 @@
   cursor: pointer;
   background: #fff;
   border-radius: 16px;
-  width: 375px;
+  flex: 30%;
   height: 125px;
   display: flex;
 
@@ -75,4 +75,19 @@
   width: 375px;
   height: 125px;
   display: flex;
+}
+
+@media only screen and (max-device-width: 960px){
+  .card {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 16px;
+    flex: 40%;
+    height: 125px;
+    display: flex;
+  }
+
+  .skeleton-container {
+    flex: 40%;
+  }
 }

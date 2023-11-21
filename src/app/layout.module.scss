@@ -14,3 +14,14 @@
   color: #000;
 }
 
+@media only screen and (max-device-width: 960px){
+  .aside {
+    display: none;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+

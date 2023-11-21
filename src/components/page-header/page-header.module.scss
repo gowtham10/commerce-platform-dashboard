@@ -1,9 +1,24 @@
 .container {
   display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__icon {
+    display: none;
+  }
 
   & > h2 {
     color: #535353;
     flex: 1;
     padding-top: 0.35rem;
+  }
+}
+
+@media screen and (max-device-width: 960px) {
+  .container {
+    &__icon {
+      display: flex;
+      gap: 20px;
+    }
   }
 }

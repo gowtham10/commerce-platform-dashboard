@@ -12,6 +12,7 @@ export function Card<F>(props: CardProps) {
     request,
     data: cardData,
     filters,
+    skeletonCount = 3,
   } = props;
 
   const { data } = useSWR(
@@ -20,7 +21,7 @@ export function Card<F>(props: CardProps) {
   );
 
   if (!cardData && !data) {
-    return <CardSkeleton />;
+    return <CardSkeleton count={skeletonCount}/>;
   }
 
   const cards = cardData || (data as any)?.data;

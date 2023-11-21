@@ -5,6 +5,17 @@
     height: 100%;
   }
 
+  &__wrapper {
+    position: absolute;
+    top: 60px;
+    flex: 2;
+    background: #FFF;
+    height: 92%;
+    color: #D1D1D1;
+    z-index: 999999;
+    left: 7px;
+  }
+
   &__company {
     flex: 1;
     padding: 1rem;
@@ -44,18 +55,23 @@
   &__nav-link {
     display: flex;
 
-    & > span {
-      flex: 1;
-      padding-left: 0.5rem;
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-    }
-
     &:hover {
       color: #FFC42A;
     }
   }
+
+  &__nav-link__icon {
+    width: 20px;
+  }
+
+  &__nav-link__text {
+    flex: 1;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
 
   &__nav-link__active {
     color: #FFC42A;

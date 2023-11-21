@@ -31,7 +31,7 @@ export function SalesOverview(props: SalesProps) {
       </div>
       <div className={styles["sales__content"]}>
         <div className={styles["sales__row"]}>
-          <Card filters={filters} {...cards} />
+          <Card skeletonCount={6} filters={filters} {...cards} />
         </div>
         <div className={styles["sales__row"]}>
           {metricDetails.map((metricDetail) => {

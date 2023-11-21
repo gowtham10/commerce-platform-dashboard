@@ -1,8 +1,8 @@
-export const SALES_CARD_REQUEST = {
+export const NAV_ITEMS = {
   "path": "/v1/sales",
   "method": "POST",
   "payload": {
-    "type": "SALES_CARDS",
+    "type": "NAVIGATION_WITH_ONE_NESTING",
   },
 };
 

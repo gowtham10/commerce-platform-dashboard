@@ -20,8 +20,8 @@ export function NavItem(props: NavItemProps) {
   return (
     <li className={styles["sidebar__nav-item"]}>
       <Link href={path} className={`${styles["sidebar__nav-link"]} ${(isExpanded || isSelected) && styles["sidebar__nav-link__active"]}`}>
-        <IconFactory iconName={icon as string} />
-        <span>{displayName}</span>
+        <span className={styles["sidebar__nav-link__icon"]}><IconFactory iconName={icon as string} /></span>
+        <span className={styles["sidebar__nav-link__text"]}>{displayName}</span>
         {isParentItem && <ParentIcon width={20} height={20} />}
       </Link>
       {children}

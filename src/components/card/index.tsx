@@ -23,11 +23,11 @@ export function Card<F>(props: CardProps) {
     return <CardSkeleton />;
   }
 
-  const cards = cardData || data;
+  const cards = cardData || (data as any)?.data;
 
   return (
     <div className={styles["container"]}>
-      {(cards as CardData[]).map((card: CardData) => {
+      {(cards as CardData[])?.map((card: CardData) => {
         return <SummaryCard {...card} />;
       })}
     </div>

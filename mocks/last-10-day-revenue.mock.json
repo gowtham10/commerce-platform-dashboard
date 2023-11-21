@@ -1,44 +1,48 @@
 {
   "data": [
     {
-      "xAxisName": "01/11/2023",
-      "value": 120
+      "Date": "01/11/2023",
+      "Revenue": 120
     },
     {
-      "xAxisName": "02/11/2023",
-      "value": 140
+      "Date": "02/11/2023",
+      "Revenue": 140
     },
     {
-      "xAxisName": "03/11/2023",
-      "value": 80
+      "Date": "03/11/2023",
+      "Revenue": 80
     },
     {
-      "xAxisName": "04/11/2023",
-      "value": 200
+      "Date": "04/11/2023",
+      "Revenue": 200
     },
     {
-      "xAxisName": "05/11/2023",
-      "value": 180
+      "Date": "05/11/2023",
+      "Revenue": 180
     },
     {
-      "xAxisName": "06/11/2023",
-      "value": 300
+      "Date": "06/11/2023",
+      "Revenue": 300
     },
     {
-      "xAxisName": "07/11/2023",
-      "value": 340
+      "Date": "07/11/2023",
+      "Revenue": 340
     },
     {
-      "xAxisName": "08/11/2023",
-      "value": 190
+      "Date": "08/11/2023",
+      "Revenue": 190
     },
     {
-      "xAxisName": "09/11/2023",
-      "value": 170
+      "Date": "09/11/2023",
+      "Revenue": 170
     },
     {
-      "xAxisName": "10/11/2023",
-      "value": 100
+      "Date": "10/11/2023",
+      "Revenue": 100
     }
-  ]
+  ],
+  "meta": {
+    "valueKey": "Revenue",
+    "xAxisKey": "Date"
+  }
 }

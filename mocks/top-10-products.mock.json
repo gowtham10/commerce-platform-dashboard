@@ -1,40 +1,64 @@
 {
-    "headers": [
-      {
-        "key": "productCode",
-        "title": "Product Code"
-      },
-      {
-        "key": "name",
-        "title": "Product Name"
-      },
-      {
-        "key": "totalProductsSold",
-        "title": "Total Products Sold"
-      },
-      {
-        "key": "totalRevenue",
-        "title": "Total Revenue"
-      }
-    ],
-    "content": [
-      {
-        "productCode": "P0001",
-        "name": "iPhone 15",
-        "totalProductsSold": 100,
-        "totalRevenue": "₹200000"
-      },
-      {
-        "productCode": "P1006",
-        "name": "Samsung Galaxy S20",
-        "totalProductsSold": 200,
-        "totalRevenue": "₹150000"
-      },
-      {
-        "productCode": "P3301",
-        "name": "OnePlus 8",
-        "totalProductsSold": 400,
-        "totalRevenue": "₹100000"
-      }
-    ]
+  "headers": [
+    {
+      "key": "productCode",
+      "title": "Product Code"
+    },
+    {
+      "key": "name",
+      "title": "Product Name"
+    },
+    {
+      "key": "totalProductsSold",
+      "title": "Total Products Sold"
+    },
+    {
+      "key": "totalRevenue",
+      "title": "Total Revenue"
+    }
+  ],
+  "content": [
+    {
+      "productCode": "P0001",
+      "name": "iPhone 15",
+      "totalProductsSold": 100,
+      "totalRevenue": "₹200000"
+    },
+    {
+      "productCode": "P1006",
+      "name": "Samsung Galaxy S20",
+      "totalProductsSold": 200,
+      "totalRevenue": "₹150000"
+    },
+    {
+      "productCode": "P3301",
+      "name": "OnePlus 8",
+      "totalProductsSold": 250,
+      "totalRevenue": "₹100000"
+    },
+    {
+      "productCode": "P4401",
+      "name": "Skechers",
+      "totalProductsSold": 400,
+      "totalRevenue": "₹80000"
+    },
+    {
+      "productCode": "P5305",
+      "name": "Nike",
+      "totalProductsSold": 350,
+      "totalRevenue": "₹75000"
+    },
+    {
+      "productCode": "P2321",
+      "name": "Pillow",
+      "totalProductsSold": 800,
+      "totalRevenue": "₹60000"
+    },
+    {
+      "productCode": "P6271",
+      "name": "Cat 6 Cable",
+      "totalProductsSold": 1500,
+      "totalRevenue": "₹55000"
+    }
+  ]
 }

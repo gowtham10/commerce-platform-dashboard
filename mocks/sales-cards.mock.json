@@ -7,28 +7,52 @@
       "iconColor": "#85BB65",
       "indicator": "UP",
       "compareValue": "+5%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/sales/overview"
+      "compareDescription": "(same day last week)"
     },
     {
       "title": "Total Products Sold (Today)",
       "value": "500",
       "icon": "ShoppingCartIcon",
       "iconColor": "#5F27CD",
-      "indicator": "DOWN",
-      "compareValue": "-2%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/products/overview"
+      "indicator": "UP",
+      "compareValue": "+2%",
+      "compareDescription": "(same day last week)"
     },
     {
-      "title": "New Customers (Today)",
-      "value": "20",
-      "icon": "UserPlusIcon",
-      "iconColor": "#FFB402",
+      "title": "Total Profit (Today)",
+      "value": "₹3,00,000",
+      "icon": "CurrencyRupeeIcon",
+      "iconColor": "#85BB65",
       "indicator": "UP",
       "compareValue": "+1%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/customers/analytics"
+      "compareDescription": "(same day last week)"
+    },
+        {
+      "title": "Total Refunds (Today)",
+      "value": "₹1,00,000",
+      "icon": "BanknotesIcon",
+      "iconColor": "#85BB65",
+      "indicator": "DOWN",
+      "compareValue": "-15%",
+      "compareDescription": "(same day last week)"
+    },
+    {
+      "title": "Total Products Returned (Today)",
+      "value": "10",
+      "icon": "ShoppingCartIcon",
+      "iconColor": "#5F27CD",
+      "indicator": "DOWN",
+      "compareValue": "-5%",
+      "compareDescription": "(same day last week)"
+    },
+    {
+      "title": "Conversion Rate (Today)",
+      "value": "₹3,00,000",
+      "icon": "CurrencyRupeeIcon",
+      "iconColor": "#85BB65",
+      "indicator": "UP",
+      "compareValue": "+3%",
+      "compareDescription": "(same day last week)"
     }
   ]
 }

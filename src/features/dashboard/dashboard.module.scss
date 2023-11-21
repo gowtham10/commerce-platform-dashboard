@@ -13,6 +13,10 @@
     }
   }
 
+  &__content {
+    padding-bottom: 1rem;
+  }
+
   &__row {
     width: 100%;
     height: auto;
@@ -33,6 +37,7 @@
     color: #A7A7A7;
     min-height: 300px;
     height: auto;
+    padding-bottom: 1rem;
 
     & > span:first-child {
       padding: 2rem 2rem 1rem;

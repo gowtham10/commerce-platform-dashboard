@@ -1,24 +1,45 @@
 {
   "data": [
     {
-      "xAxisName": "Electronics",
-      "totalValue": 200,
-      "value": 120
+      "Category": "Electronics",
+      "Revenue": 100000,
+      "Profit": 70000,
+      "Currency": "INR"
     },
     {
-      "xAxisName": "Shoes",
-      "totalValue": 300,
-      "value": 150
+      "Category": "Shoes",
+      "Revenue": 50000,
+      "Profit": 35000,
+      "Currency": "INR"
     },
     {
-      "xAxisName": "Computer",
-      "totalValue": 400,
-      "value": 220
+      "Category": "Computer",
+      "Revenue": 25000,
+      "Profit": 17500,
+      "Currency": "INR"
     },
     {
-      "xAxisName": "Clothing",
-      "totalValue": 100,
-      "value": 40
+      "Category": "Clothing",
+      "Revenue": 15000,
+      "Profit": 7500,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Applicances",
+      "Revenue": 34000,
+      "Profit": 22000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Mobiles",
+      "Revenue": 55000,
+      "Profit": 38000,
+      "Currency": "INR"
     }
-  ]
+  ],
+  "meta": {
+    "xAxisKey": "Category",
+    "totalValueKey": "Revenue",
+    "valueKey": "Profit"
+  }
 }

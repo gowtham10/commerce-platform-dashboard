@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
     MockFileNames.DASHBOARD_CARDS,
   ) as any;
 
-  return NextResponse.json(mockData.data);
+  return NextResponse.json({...mockData});
 }
 
 

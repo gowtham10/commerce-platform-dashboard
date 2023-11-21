@@ -10,5 +10,5 @@ export async function POST(req: Request) {
     MockFileNames[type as keyof typeof MockFileNames],
   ) as any;
 
-  return NextResponse.json(mockData.data);
+  return NextResponse.json({...mockData});
 }

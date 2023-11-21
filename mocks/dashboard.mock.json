@@ -31,7 +31,9 @@
     "request": {
       "path": "/v1/dashboard/cards",
       "method": "POST",
-      "payload": {}
+      "payload": {
+        "type": "DASHBOARD_CARDS"
+      }
     }
   },
   "metricDetails": [
@@ -66,7 +68,7 @@
     },
     {
       "key": "TOP_PRODUCTS",
-      "name": "Top 10 Products (Last 10 Days)",
+      "name": "Top Products (Last 10 Days)",
       "description": "Top 10 selling products in last 10 days",
       "type": "NO_FILTER_TABLE",
       "redirectUrl": "/products/overview",
@@ -85,7 +87,7 @@
     },
     {
       "key": "TOP_CUSTOMERS",
-      "name": "Top 10 Customers (Last 10 Days)",
+      "name": "Top Customers (Last 10 Days)",
       "description": "Top 10 high spending customers in the last 10 days",
       "type": "NO_FILTER_TABLE",
       "redirectUrl": "/customers/analytics",
@@ -93,7 +95,7 @@
         "path": "/v1/customers",
         "method": "POST",
         "payload": {
-          "type": "TOP_PRODUCTS",
+          "type": "TOP_CUSTOMERS",
           "order": "DESC",
           "limit": 10,
           "offset": 0,
@@ -109,10 +111,10 @@
       "type": "NO_FILTER_TABLE",
       "redirectUrl": "/sales/overview",
       "request": {
-        "path": "/v1/products",
+        "path": "/v1/sales",
         "method": "POST",
         "payload": {
-          "type": "TOP_PRODUCTS",
+          "type": "RECENT_ORDERS",
           "order": "DESC",
           "limit": 10,
           "offset": 0

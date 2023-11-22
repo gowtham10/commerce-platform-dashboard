@@ -1,27 +1,77 @@
 {
   "cards": {
     "request": {
-      "path": "/v1/sales",
+      "path": "/v1/products",
       "method": "POST",
       "payload": {
-        "type": "SALES_CARDS"
+        "type": "PRODUCTS_CARDS"
       }
     }
   },
   "metricDetails": [
     {
-      "key": "LAST_10_DAYS_REVENUE",
-      "name": "Revenue & Profit",
+      "key": "TOP_PRODUCTS",
+      "name": "Top Selling Products",
       "description": "",
-      "type": "SIMPLE_BAR_CHART",
+      "type": "NO_FILTER_TABLE",
       "request": {
-        "path": "/v1/sales",
+        "path": "/v1/products",
         "method": "POST",
         "payload": {
-          "type": "SALES_REVENUE_PROFIT"
+          "type": "TOP_PRODUCTS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    },
+    {
+      "key": "TOP_RATED_PRODUCTS",
+      "name": "Top Rated Products",
+      "description": "",
+      "type": "NO_FILTER_TABLE",
+      "request": {
+        "path": "/v1/products",
+        "method": "POST",
+        "payload": {
+          "type": "TOP_RATED_PRODUCTS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    },
+    {
+      "key": "UNDERPERFORMING_PRODUCTS",
+      "name": "Underperforming Products",
+      "description": "",
+      "type": "NO_FILTER_TABLE",
+      "request": {
+        "path": "/v1/products",
+        "method": "POST",
+        "payload": {
+          "type": "UNDERPERFORMING_PRODUCTS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    },
+    {
+      "key": "MOST_SOLD_PRODUCTS",
+      "name": "Most Sold Products",
+      "description": "",
+      "type": "NO_FILTER_TABLE",
+      "request": {
+        "path": "/v1/products",
+        "method": "POST",
+        "payload": {
+          "type": "MOST_SOLD_PRODUCTS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
         }
       }
     }
   ]
 }
-

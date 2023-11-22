@@ -1,27 +1,45 @@
 {
   "cards": {
     "request": {
-      "path": "/v1/sales",
+      "path": "/v1/customers",
       "method": "POST",
       "payload": {
-        "type": "SALES_CARDS"
+        "type": "CUSTOMERS_CARDS"
       }
     }
   },
   "metricDetails": [
     {
-      "key": "LAST_10_DAYS_REVENUE",
-      "name": "Revenue & Profit",
-      "description": "",
-      "type": "SIMPLE_BAR_CHART",
+      "key": "TOP_CUSTOMERS",
+      "name": "Top Spending Customers",
+      "description": "Top 10 high spending customers in the last 10 days",
+      "type": "NO_FILTER_TABLE",
       "request": {
-        "path": "/v1/sales",
+        "path": "/v1/customers",
         "method": "POST",
         "payload": {
-          "type": "SALES_REVENUE_PROFIT"
+          "type": "TOP_CUSTOMERS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    },
+    {
+      "key": "CHANNEL_WISE_CUSTOMERS",
+      "name": "Channel wise customers",
+      "description": "Channel wise customers",
+      "type": "TINY_BAR_CHART",
+      "request": {
+        "path": "/v1/customers",
+        "method": "POST",
+        "payload": {
+          "type": "CHANNEL_WISE_CUSTOMERS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
         }
       }
     }
   ]
 }
-

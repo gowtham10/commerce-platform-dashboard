@@ -35,6 +35,24 @@
       "Revenue": 55000,
       "Profit": 38000,
       "Currency": "INR"
+    },
+    {
+      "Category": "Books, Movies, Music, and Games",
+      "Revenue": 35000,
+      "Profit": 17000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Personal Care and Beauty",
+      "Revenue": 32500,
+      "Profit": 16000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Food and Beverage",
+      "Revenue": 27500,
+      "Profit": 18700,
+      "Currency": "INR"
     }
   ],
   "meta": {

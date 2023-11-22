@@ -69,7 +69,7 @@
     },
     {
       "key": "TOP_PRODUCTS",
-      "name": "Top Products (Last 10 Days)",
+      "name": "Top Selling Products (Last 10 Days)",
       "description": "Top 10 selling products in last 10 days",
       "type": "NO_FILTER_TABLE",
       "redirectUrl": "/products/overview",
@@ -80,15 +80,13 @@
           "type": "TOP_PRODUCTS",
           "order": "DESC",
           "limit": 10,
-          "offset": 0,
-          "startDate": "01-11-2023",
-          "endDate": "10-11-2023"
+          "offset": 0
         }
       }
     },
     {
       "key": "TOP_CUSTOMERS",
-      "name": "Top Customers (Last 10 Days)",
+      "name": "Top Spending Customers (Last 10 Days)",
       "description": "Top 10 high spending customers in the last 10 days",
       "type": "NO_FILTER_TABLE",
       "redirectUrl": "/customers/analytics",

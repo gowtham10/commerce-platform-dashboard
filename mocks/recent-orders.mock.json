@@ -1,0 +1,97 @@
+{
+  "headers": [
+    {
+      "key": "orderId",
+      "title": "Order ID"
+    },
+    {
+      "key": "customerName",
+      "title": "Customer Name"
+    },
+    {
+      "key": "orderDate",
+      "title": "Order Date"
+    },
+    {
+      "key": "orderAmount",
+      "title": "Order Amount"
+    },
+    {
+      "key": "paymentStatus",
+      "title": "Payment Status"
+    },
+    {
+      "key": "paymentStatus",
+      "title": "Payment Status"
+    },
+    {
+      "key": "orderStatus",
+      "title": "Order Status"
+    }
+  ],
+  "content": [
+    {
+      "orderId": "O50020",
+      "customerName": "Jayla Burgess",
+      "orderDate": "20-11-2023",
+      "orderAmount": "₹100000",
+      "paymentStatus": "PAID",
+      "paymentType": "Card",
+      "orderStatus": "Processing"
+    },
+    {
+      "orderId": "O51020",
+      "customerName": "Keaton Correa",
+      "orderDate": "20-11-2023",
+      "orderAmount": "₹106000",
+      "paymentStatus": "UNPAID",
+      "paymentType": "COD",
+      "orderStatus": "Processing"
+    },
+    {
+      "orderId": "O51011",
+      "customerName": "Alyssa Levy",
+      "orderDate": "20-11-2023",
+      "orderAmount": "₹900000",
+      "paymentStatus": "PAID",
+      "paymentType": "Wallet",
+      "orderStatus": "Processing"
+    },
+    {
+      "orderId": "O51001",
+      "customerName": "Brodie Steele",
+      "orderDate": "19-11-2023",
+      "orderAmount": "₹110000",
+      "paymentStatus": "PAID",
+      "paymentType": "NetBanking",
+      "orderStatus": "Shipped"
+    },
+    {
+      "orderId": "O49920",
+      "customerName": "Colby Robinson",
+      "orderDate": "19-11-2023",
+      "orderAmount": "₹100000",
+      "paymentStatus": "PAID",
+      "paymentType": "Card",
+      "orderStatus": "Packing"
+    },
+    {
+      "orderId": "049890",
+      "customerName": "Tinsley Anthony",
+      "orderDate": "19-11-2023",
+      "orderAmount": "₹5100000",
+      "paymentStatus": "PAID",
+      "paymentType": "Card",
+      "orderStatus": "Shipped"
+    },
+    {
+      "orderId": "049880",
+      "customerName": "Sergio Woodard",
+      "orderDate": "18-11-2023",
+      "orderAmount": "₹800000",
+      "paymentStatus": "PAID",
+      "paymentType": "Wallet",
+      "orderStatus": "Delivered"
+    }
+  ]
+}

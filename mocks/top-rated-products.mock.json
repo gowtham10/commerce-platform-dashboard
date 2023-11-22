@@ -1,0 +1,65 @@
+{
+  "headers": [
+    {
+      "key": "productCode",
+      "title": "Product Code"
+    },
+    {
+      "key": "name",
+      "title": "Product Name"
+    },
+    {
+      "key": "totalReviews",
+      "title": "Total Reviews"
+    },
+    {
+      "key": "averageRating",
+      "title": "Average Rating"
+    }
+  ],
+  "content": [
+    {
+      "productCode": "P0001",
+      "name": "iPhone 15",
+      "totalReviews": 100,
+      "averageRating": "4.5"
+    },
+    {
+      "productCode": "P1006",
+      "name": "Samsung Galaxy S20",
+      "totalReviews": 200,
+      "averageRating": "4.45"
+    },
+    {
+      "productCode": "P3301",
+      "name": "OnePlus 8",
+      "totalReviews": 250,
+      "averageRating": "4.3"
+    },
+    {
+      "productCode": "P4401",
+      "name": "Skechers",
+      "totalReviews": 400,
+      "averageRating": "4.25"
+    },
+    {
+      "productCode": "P5305",
+      "name": "Nike",
+      "totalReviews": 350,
+      "averageRating": "4.25"
+    },
+    {
+      "productCode": "P2321",
+      "name": "Pillow",
+      "totalReviews": 800,
+      "averageRating": "4"
+    },
+    {
+      "productCode": "P6271",
+      "name": "Cat 6 Cable",
+      "totalReviews": 1500,
+      "averageRating": "4"
+    }
+  ]
+}
+

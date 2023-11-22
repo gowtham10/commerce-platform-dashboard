@@ -21,7 +21,7 @@
     {
       "title": "Total Profit",
       "value": "₹3,00,000",
-      "icon": "CurrencyRupeeIcon",
+      "icon": "CircleStackIcon",
       "iconColor": "#85BB65",
       "indicator": "UP",
       "compareValue": "+1%",
@@ -31,7 +31,7 @@
       "title": "Total Refunds",
       "value": "₹1,00,000",
       "icon": "BanknotesIcon",
-      "iconColor": "#85BB65",
+      "iconColor": "#FF5252",
       "indicator": "DOWN",
       "compareValue": "-15%",
       "compareDescription": "(same day last week)"
@@ -40,7 +40,7 @@
       "title": "Total Products Returned",
       "value": "10",
       "icon": "ShoppingCartIcon",
-      "iconColor": "#5F27CD",
+      "iconColor": "#ff7e67",
       "indicator": "DOWN",
       "compareValue": "-5%",
       "compareDescription": "(same day last week)"
@@ -48,8 +48,8 @@
     {
       "title": "Conversion Rate",
       "value": "25%",
-      "icon": "CurrencyRupeeIcon",
-      "iconColor": "#85BB65",
+      "icon": "VariableIcon",
+      "iconColor": "#00aaa0",
       "indicator": "UP",
       "compareValue": "+3%",
       "compareDescription": "(same day last week)"

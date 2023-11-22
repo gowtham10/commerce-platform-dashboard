@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "Channel": "Website",
+      "Count": 120
+    },
+    {
+      "Channel": "MobWeb",
+      "Count": 500
+    },
+    {
+      "Channel": "ios",
+      "Count": 1200
+    },
+    {
+      "Channel": "android",
+      "Count": 2000
+    },
+    {
+      "Channel": "WhiteLabel",
+      "Count": 750
+    }
+  ],
+  "meta": {
+    "valueKey": "Count",
+    "xAxisKey": "Channel"
+  }
+}

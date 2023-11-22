@@ -14,7 +14,12 @@ export enum MockFileNames {
   SALES_REVENUE_PROFIT = "sales-revenue-profit.mock",
   PRODUCTS_CARDS = "products-cards.mock",
   PRODUCTS_METRICS = "products-metrics.mock",
-  CUSTOMERS_CARDS = "customers-cards.mock",
+  CUSTOMERS_CARDS = "customer-cards.mock",
   CUSTOMERS_METRICS = "customers-metrics.mock",
+  CHANNEL_WISE_CUSTOMERS = "customers-traffic.mock",
   HOURLY_SALES_TREND = "sales-trend.mock",
+  RECENT_ORDERS = "recent-orders.mock",
+  MOST_SOLD_PRODUCTS = "most-sold-products.mock",
+  TOP_RATED_PRODUCTS = "top-rated-products.mock",
+  UNDERPERFORMING_PRODUCTS = "underperforming-products.mock",
 }

@@ -1,35 +1,31 @@
 {
   "data": [
     {
-      "title": "Total Sales (Today)",
-      "value": "₹10,00,000",
-      "icon": "BanknotesIcon",
-      "iconColor": "#85BB65",
-      "indicator": "UP",
-      "compareValue": "+5%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/sales/overview"
+      "title": "Top Performing Category",
+      "value": "Mobiles",
+      "icon": "StarIcon",
+      "iconColor": "#00aaa0"
     },
     {
-      "title": "Total Products Sold (Today)",
-      "value": "500",
+      "title": "Most Ordered Product",
+      "value": "Soap",
       "icon": "ShoppingCartIcon",
       "iconColor": "#5F27CD",
-      "indicator": "DOWN",
-      "compareValue": "-2%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/products/overview"
+      "compareValue": "1500"
     },
     {
-      "title": "New Customers (Today)",
-      "value": "20",
-      "icon": "UserPlusIcon",
-      "iconColor": "#FFB402",
-      "indicator": "UP",
-      "compareValue": "+1%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/customers/analytics"
+      "title": "Least Ordered Product",
+      "value": "Pen",
+      "icon": "ArchiveBoxArrowDownIcon",
+      "iconColor": "#FF5252",
+      "compareValue": "20"
+    },
+    {
+      "title": "Top Rated Product",
+      "value": "iPhone 15",
+      "icon": "HandThumbUpIcon",
+      "iconColor": "#85BB65",
+      "compareValue": "4.5"
     }
   ]
 }
-

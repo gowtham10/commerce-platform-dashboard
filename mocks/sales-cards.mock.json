@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "title": "Total Sales (Today)",
+      "title": "Total Sales",
       "value": "₹10,00,000",
       "icon": "BanknotesIcon",
       "iconColor": "#85BB65",
@@ -10,7 +10,7 @@
       "compareDescription": "(same day last week)"
     },
     {
-      "title": "Total Products Sold (Today)",
+      "title": "Products Sold",
       "value": "500",
       "icon": "ShoppingCartIcon",
       "iconColor": "#5F27CD",
@@ -19,7 +19,7 @@
       "compareDescription": "(same day last week)"
     },
     {
-      "title": "Total Profit (Today)",
+      "title": "Total Profit",
       "value": "₹3,00,000",
       "icon": "CurrencyRupeeIcon",
       "iconColor": "#85BB65",
@@ -28,7 +28,7 @@
       "compareDescription": "(same day last week)"
     },
         {
-      "title": "Total Refunds (Today)",
+      "title": "Total Refunds",
       "value": "₹1,00,000",
       "icon": "BanknotesIcon",
       "iconColor": "#85BB65",
@@ -37,7 +37,7 @@
       "compareDescription": "(same day last week)"
     },
     {
-      "title": "Total Products Returned (Today)",
+      "title": "Total Products Returned",
       "value": "10",
       "icon": "ShoppingCartIcon",
       "iconColor": "#5F27CD",
@@ -46,8 +46,8 @@
       "compareDescription": "(same day last week)"
     },
     {
-      "title": "Conversion Rate (Today)",
-      "value": "₹3,00,000",
+      "title": "Conversion Rate",
+      "value": "25%",
       "icon": "CurrencyRupeeIcon",
       "iconColor": "#85BB65",
       "indicator": "UP",

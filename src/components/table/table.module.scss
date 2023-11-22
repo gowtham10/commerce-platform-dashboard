@@ -1,11 +1,12 @@
 .table {
 
   margin: 0 1rem;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0 10px;
 
   & thead {
-    font-size: 0.85rem;
-    color: #535353;
+    font-size: 0.75rem;
+    color: var(--light-gray);
   }
 
   & th {
@@ -19,9 +20,13 @@
   & tbody {
     td {
       text-align: center;
+      font-size: 0.85rem;
+      color: var(--dark-gray);
     }
-    tr:nth-child(odd) {
-      background-color: #eee;
+    tr {
+      background: var(--white);
+      transform: scale(1,1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
   }
 

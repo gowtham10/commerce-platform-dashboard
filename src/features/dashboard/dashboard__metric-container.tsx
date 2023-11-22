@@ -3,6 +3,7 @@ import { ComponentFactory } from "@/factories/component-factory";
 import styles from "./dashboard.module.scss";
 import { useRouter } from "next/navigation";
 import { MetricContainerProps } from "../common.interface";
+import commonStyles from "@/features/common.module.scss";
 
 export function MetricContainer(props: MetricContainerProps) {
   const { redirectUrl, name, type, request, data, filters } = props;
@@ -15,7 +16,12 @@ export function MetricContainer(props: MetricContainerProps) {
   };
 
   return (
-    <div className={styles["dashboard__metric-container"]} onClick={handleClick}>
+    <div
+      className={`${styles["dashboard__metric-container"]} ${
+        redirectUrl ? commonStyles["cursor-pointer"] : ""
+      }`}
+      onClick={handleClick}
+    >
       <span>{name}</span>
       <ComponentFactory
         type={type}

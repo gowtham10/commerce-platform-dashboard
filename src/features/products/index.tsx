@@ -7,6 +7,8 @@ import { ProductProps } from "./products.interface";
 import { SimpleControlSelect } from "@/components/select/simple-control-select";
 import {
   getCheckboxOption,
+  getDropdownIndicator,
+  getIndicatorsContainer,
   getValueContainer,
 } from "@/components/select/select-components";
 import { RangeDatePicker } from "@/components/date-picker/range-date-picker";
@@ -44,6 +46,8 @@ export function ProductPerformance(props: ProductProps) {
             customComponents={{
               ValueContainer: getValueContainer("Categories Selected: "),
               Option: getCheckboxOption(),
+              IndicatorsContainer: getIndicatorsContainer(),
+              DropdownIndicator: getDropdownIndicator(),
             }}
           />
           <RangeDatePicker handleDateChange={handleDateChange} />

@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "Hour": "00:00",
+      "Revenue": 120
+    },
+    {
+      "Hour": "01:00",
+      "Revenue": 140
+    },
+    {
+      "Hour": "02:00",
+      "Revenue": 80
+    },
+    {
+      "Hour": "03:00",
+      "Revenue": 200
+    },
+    {
+      "Hour": "04:00",
+      "Revenue": 180
+    },
+    {
+      "Hour": "05:00",
+      "Revenue": 300
+    },
+    {
+      "Hour": "06:00",
+      "Revenue": 340
+    },
+    {
+      "Hour": "07:00",
+      "Revenue": 190
+    },
+    {
+      "Hour": "08:00",
+      "Revenue": 170
+    },
+    {
+      "Hour": "09:00",
+      "Revenue": 100
+    },
+    {
+      "Hour": "10:00",
+      "Revenue": 350
+    },
+    {
+      "Hour": "11:00",
+      "Revenue": 425
+    }
+  ],
+  "meta": {
+    "valueKey": "Revenue",
+    "xAxisKey": "Hour"
+  }
+}

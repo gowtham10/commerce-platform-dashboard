@@ -6,6 +6,7 @@ import useSWR from "swr";
 import { RequestType } from "../common.interface";
 import { CardSkeleton } from "./card-skeleton";
 import { SummaryCard } from "./summary-card";
+import { SmallCard } from "./small-card";
 
 export function Card<F>(props: CardProps) {
   const {
@@ -29,7 +30,7 @@ export function Card<F>(props: CardProps) {
   return (
     <div className={styles["container"]}>
       {(cards as CardData[])?.map((card: CardData) => {
-        return <SummaryCard {...card} />;
+        return <SmallCard {...card} />;
       })}
     </div>
   );

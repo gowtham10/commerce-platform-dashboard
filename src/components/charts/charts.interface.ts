@@ -5,6 +5,8 @@ export interface TinyBarChartData {
   value: number;
 }
 
+export type SimpleLineChartData = TinyBarChartData;
+
 export interface SimpleBarChartData {
   xAxisName: string;
   totalValue: number;
@@ -20,6 +22,10 @@ export type TinyBarChartProps<F> = ChartCommonProps<F> & {
   data?: TinyBarChartData[];
 };
 
+export type SimpleLineChartProps<F> = ChartCommonProps<F> & {
+  data?: SimpleLineChartData[];
+};
+
 export type SimpleBarChartProps<F> = ChartCommonProps<F> & {
   data?: SimpleBarChartData[];
-}
+};

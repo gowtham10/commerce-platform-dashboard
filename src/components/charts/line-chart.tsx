@@ -1,22 +1,21 @@
 import {
-  Bar,
-  BarChart,
+  Line,
+  LineChart,
   CartesianGrid,
   Legend,
   Label,
-  Rectangle,
   ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
 import { BarChartSkeleton } from "./bar-skeleton";
-import { TinyBarChartData, TinyBarChartProps } from "./charts.interface";
+import { SimpleLineChartData, SimpleLineChartProps } from "./charts.interface";
 import useSWR from "swr";
 import { constructSWRKey, postFetcher } from "@/helpers";
 import { RequestType } from "../common.interface";
 
-export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
+export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
   const { data: chartData, request, filters } = props;
 
   const { data: fetchedData } = useSWR(
@@ -34,10 +33,10 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <BarChart
+      <LineChart
         width={500}
         height={300}
-        data={ data as TinyBarChartData[]}
+        data={ data as SimpleLineChartData[]}
         margin={{
           top: 5,
           right: 30,
@@ -52,11 +51,13 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
         </YAxis>
         <Tooltip />
         <Legend />
-        <Bar
+        <Line
+          type="monotone"
           dataKey={meta.valueKey || "value"}
-          fill="#FFC029"
+          stroke="#8884d8"
         />
-      </BarChart>
+      </LineChart>
     </ResponsiveContainer>
   );
 }
+

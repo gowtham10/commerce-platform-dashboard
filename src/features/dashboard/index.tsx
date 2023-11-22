@@ -8,6 +8,8 @@ import { SimpleControlSelect } from "@/components/select/simple-control-select";
 import { useState } from "react";
 import {
   getCheckboxOption,
+  getDropdownIndicator,
+  getIndicatorsContainer,
   getValueContainer,
 } from "@/components/select/select-components";
 
@@ -43,6 +45,8 @@ export function Dashboard(props: DashboardProps) {
             customComponents={{
               ValueContainer: getValueContainer("Metrics Selected: "),
               Option: getCheckboxOption(),
+              DropdownIndicator: getDropdownIndicator(),
+              IndicatorsContainer: getIndicatorsContainer(),
             }}
           />
         </div>

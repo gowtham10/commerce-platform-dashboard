@@ -16,4 +16,5 @@ export enum MockFileNames {
   PRODUCTS_METRICS = "products-metrics.mock",
   CUSTOMERS_CARDS = "customers-cards.mock",
   CUSTOMERS_METRICS = "customers-metrics.mock",
+  HOURLY_SALES_TREND = "sales-trend.mock",
 }

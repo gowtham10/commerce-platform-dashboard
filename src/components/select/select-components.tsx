@@ -1,9 +1,11 @@
 import { components } from "react-select";
 import { Children, useState } from "react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import styles from "./select.module.scss";
 
 export const getValueContainer = (
   selectText: string,
-) => (({ children, getValue, getStyles,options, ...props }: any) => {
+) => (({ children, getValue, getStyles, options, ...props }: any) => {
   var length = getValue().length;
 
   return (
@@ -67,5 +69,25 @@ export const getCheckboxOption = () => (({
       <input type="checkbox" checked={isSelected} />
       {children}
     </components.Option>
+  );
+});
+
+export const getDropdownIndicator = () => ((
+  props: any,
+) => {
+  return (
+    <components.DropdownIndicator {...props}>
+      <ChevronDownIcon color="#535353" width={20} height={20} />
+    </components.DropdownIndicator>
+  );
+});
+
+export const getIndicatorsContainer = () => ((
+  props: any,
+) => {
+  return (
+    <div className={styles["indicators-container"]}>
+      <components.IndicatorsContainer {...props} />
+    </div>
   );
 });

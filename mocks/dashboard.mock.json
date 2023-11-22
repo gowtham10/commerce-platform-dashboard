@@ -22,6 +22,7 @@
     }
   ],
   "enabledMetricKeys": [
+    "HOURLY_SALES_TREND",
     "LAST_10_DAYS_REVENUE",
     "TOP_PRODUCTS",
     "TOP_CUSTOMERS",
@@ -48,7 +49,7 @@
         "method": "POST",
         "polling": "SSE",
         "payload": {
-          "type": "SALES_TREND"
+          "type": "HOURLY_SALES_TREND"
         }
       }
     },

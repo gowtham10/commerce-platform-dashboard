@@ -29,8 +29,8 @@ export function Card<F>(props: CardProps) {
 
   return (
     <div className={styles["container"]}>
-      {(cards as CardData[])?.map((card: CardData) => {
-        return <SmallCard {...card} />;
+      {(cards as CardData[])?.map((card: CardData, index: number) => {
+        return <SmallCard key={index} {...card} />;
       })}
     </div>
   );

@@ -4,18 +4,18 @@ Fictional e-commerce platform which sells products of all categories like Amazon
 
 Need to build an internal tool for this platform which helps the organisation to get quick overview on the sales, product performance and customer trends. This tool will help the organization to promptly take any required actions, whether enhancing sales or strategizing for new approaches. 
     
-This internal tool will have the below 3 dashboard,
+This internal tool will have the below 3 dashboard and a landing page (which gives summary of these dashboards)
 1. Sales Overview
 2. Product Performance
 3. Customer Analytics
 
 ---
 ### Navigation
-The internal tool wil have the layout with navigation on the left side and profile details on the top right.
+The internal tool wil have the layout with company name, navigation and profile on the left side and main content on the right side.
 
 - Navigation will have the links to navigate to the respective dashboard, find the navigation order below,
 
-    1. Dashboard - /dashboard 
+    1. Dashboard - /
     2. Sales 
         2.1 Overview - /sales/overview
     3. Products
@@ -27,64 +27,75 @@ The internal tool wil have the layout with navigation on the left side and profi
 ### Dashboard
 
 Dashboard will showcase
+Filters
+1. Metrics selection - Dropdown - which helps to customise the metrics to be shown in the dashboard.
 
-1. Hourly sales - real time update - line chart
-2. Sales for last 15 days - bar chart
-3. Top 5 products sold in last 15 days - table ( with product name, category and quantity and amount)
-4. Top 5 customer spends in last 15 days - table ( with customer name, total spends )
+Cards Section
+1. Today's Sales amount
+2. Today's Orders count
+3. Today's New Customers count
+
+Metric Section
+1. Hourly sales trend - line chart
+2. Sales for last 10 days - bar chart
+3. Top 5 products sold in last 10 days - table 
+4. Top 5 customer spends in last 10 days - table 
+5. Recent orders
 
 on clicking on the each component will take them to their respective overview page.
-
 
 ---
 ### Sales Overview
 
 For the organisation to get quick insight on the sales, display below metrics
 
-1. Total Sales - card (with relavant comparison)
-2. Total Order - card (with relavant comparison)
-3. Total Profit - card (with relavant comparison)
-4. Conversion Rate - card (with relavant comparison)
-5. Total Refunds - card (with relavant comparison)
-6. Total Returns - card (with relavant comparison)
-7. Sales by channel - pie chart ( ios, android, website, mobile web)
-8. Revenue & Profile product categorywise - stackedbar chart
+Filters
+1. Date 
 
-All these metrics are aggregated for the selected date filter. By default it is selected for ==Today==. 
+Cards Section
+1. Total Sales
+2. Products Sold
+3. Total Profit
+4. Conversion Rate
+5. Total Refunds
+6. Total Products Returned
 
-Relavant Comparision 
-Today / Yesterday - if single day is filtered (correponding metrics for that last week same day is used for comparison)
-if custom date is selected - correponding metrics for last x days data is compared
+Metric Section
+1. Revenue & Profile product categorywise - bar chart
 
 ---
 ### Product Performance
 
 Filters
-Category + Timestamp
+1. Category
+2. Date
 
-Cards
-1. Total products sold
-2. Total products returned
-3. No. of products not sold
+Cards Section
+1. Top Performing Category
+2. Most Ordered Product
+3. Least Ordered Product
+4. Top Rated Product
 
-Table
-1. Top 10 products by revenue
-2. Top 10 underpeforming products by revenue
-3. Top 10 products by quantity
-4. Top 10 products by product returns
-5. Top 10 products by customer rating
-6. Top 10 products by bad customer rating
-
+Metric Section
+1. Top Selling Products  - Table
+2. Top Rated Products - Table 
+3. Under Performing Products - Table 
+4. Most Sold Products
 
 ---
 ### Customer Analytics
 
-Customer traffic by channel
-Total customers 
-Total new customers
-Total repeating customers
-Top spending customers
-Funnel
+Filters 
+1. Date
+
+Cards Section
+1. New Customers
+2. Active Customers
+3. Inactive Customers
+
+Metric Section
+1. Top Spending Customers
+2. Channel wise Customers
 
 ---
 ### Not in this scope

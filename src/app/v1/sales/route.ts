@@ -6,8 +6,6 @@ export async function POST(req: Request) {
   const body: any = await req.json();
   const { type } = body;
 
-  console.log(type, "type");
-
   const mockData = await readJsonFile(
     MockFileNames[type as keyof typeof MockFileNames],
   ) as any;

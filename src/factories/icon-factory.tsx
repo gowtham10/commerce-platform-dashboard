@@ -1,5 +1,4 @@
 import useLazy from "@/hooks/useLazy";
-import { DefaultIconResolver } from "./default-icon-resolver";
 import { IconFactoryTypes } from "./factory.interface";
 import { DynamicLoaderKeys } from "@/constants";
 

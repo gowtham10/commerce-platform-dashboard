@@ -12,7 +12,7 @@ export interface CardData {
 }
 
 export type SummaryCardProps = CardData;
-export type SmallCardProps = CardData;
+export type SmallCardProps = CardData & {key: number};
 
 export interface CardProps {
   request?: RequestType;

@@ -1,0 +1,47 @@
+{
+  "data": [
+    {
+      "key": "REVENUE_PROFIT",
+      "name": "Revenue Profit by Category",
+      "description": "",
+      "type": "SIMPLE_BAR_CHART",
+      "data": [
+        {
+          "xAxisName": "Electronics",
+          "totalValue": 200,
+          "value": 120
+        },
+        {
+          "xAxisName": "Shoes",
+          "totalValue": 300,
+          "value": 150
+        },
+        {
+          "xAxisName": "Computer",
+          "totalValue": 400,
+          "value": 220
+        },
+        {
+          "xAxisName": "Clothing",
+          "totalValue": 100,
+          "value": 40
+        },
+        {
+          "xAxisName": "Books, Movies, Music, and Games",
+          "totalValue": 350,
+          "value": 70
+        },
+        {
+          "xAxisName": "Personal Care and Beauty",
+          "totalValue": 325,
+          "value": 60
+        },
+        {
+          "xAxisName": "Food and Beverage",
+          "totalValue": 275,
+          "value": 87
+        }
+      ]
+    }
+  ]
+}

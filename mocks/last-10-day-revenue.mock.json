@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "Date": "01/11/2023",
+      "Revenue": 120
+    },
+    {
+      "Date": "02/11/2023",
+      "Revenue": 140
+    },
+    {
+      "Date": "03/11/2023",
+      "Revenue": 80
+    },
+    {
+      "Date": "04/11/2023",
+      "Revenue": 200
+    },
+    {
+      "Date": "05/11/2023",
+      "Revenue": 180
+    },
+    {
+      "Date": "06/11/2023",
+      "Revenue": 300
+    },
+    {
+      "Date": "07/11/2023",
+      "Revenue": 340
+    },
+    {
+      "Date": "08/11/2023",
+      "Revenue": 190
+    },
+    {
+      "Date": "09/11/2023",
+      "Revenue": 170
+    },
+    {
+      "Date": "10/11/2023",
+      "Revenue": 100
+    }
+  ],
+  "meta": {
+    "valueKey": "Revenue",
+    "xAxisKey": "Date"
+  }
+}

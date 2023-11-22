@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  cursor: pointer;
+  background: var(--white);
+  border-radius: 16px;
+  width: 375px;
+  height: 125px;
+  display: flex;
+
+  &__skeleton {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    min-width: 107px;
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+
+    & > div:first-child {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      justify-content: center;
+    }
+  }
+
+  &__value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-gray);
+  }
+
+  &__title {
+    color: var(--light-gray);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__compare-container {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+  }
+
+  &__compare__up {
+    color: var(--green);
+  }
+
+  &__compare__down {
+    color: var(--red);
+  }
+
+  &__compare-description {
+    color: var(--light-gray);
+    font-size: 0.85rem;
+  }
+}
+
+.skeleton-container {
+  background: var(--white);
+  border-radius: 16px;
+  width: 225px;
+  height: 125px;
+  display: flex;
+  padding: 2rem;
+}
+
+.smallcard {
+  background: var(--white);
+  border-radius: 16px;
+  width: 225px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 2rem 2rem;
+  gap: 1rem;
+
+  & > div:first-child {
+    display: flex;
+  }
+
+  &__value-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+  }
+
+  &__skeleton {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__summary {
+    display: flex;
+    font-size: 0.75rem;
+
+    & > div:first-child {
+      display: flex;
+      flex: 2;
+    }
+  }
+
+  &__value {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  &__title {
+    color: var(--dark-gray);
+    font-size: 0.75rem;
+  }
+
+  &__compare-container {
+    display: flex;
+    flex: 1;
+    gap: 5px;
+  }
+
+  &__compare__up {
+    color: var(--green);
+  }
+
+  &__compare__down {
+    color: var(--red);
+  }
+
+  &__compare-description {
+    color: var(--light-gray);
+    font-size: 0.75rem;
+  }
+}
+
+
+@media only screen and (max-device-width: 960px){
+  .card {
+    cursor: pointer;
+    background: var(--white);
+    border-radius: 16px;
+    flex: 40%;
+    height: 125px;
+    display: flex;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "Category": "Electronics",
+      "Revenue": 100000,
+      "Profit": 70000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Shoes",
+      "Revenue": 50000,
+      "Profit": 35000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Computer",
+      "Revenue": 25000,
+      "Profit": 17500,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Clothing",
+      "Revenue": 15000,
+      "Profit": 7500,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Applicances",
+      "Revenue": 34000,
+      "Profit": 22000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Mobiles",
+      "Revenue": 55000,
+      "Profit": 38000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Books",
+      "Revenue": 35000,
+      "Profit": 17000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Personal Care",
+      "Revenue": 32500,
+      "Profit": 16000,
+      "Currency": "INR"
+    },
+    {
+      "Category": "Food & Beverage",
+      "Revenue": 27500,
+      "Profit": 18700,
+      "Currency": "INR"
+    }
+  ],
+  "meta": {
+    "xAxisKey": "Category",
+    "totalValueKey": "Revenue",
+    "valueKey": "Profit"
+  }
+}

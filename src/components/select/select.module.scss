@@ -1,0 +1,9 @@
+.indicators-container {
+  background: #FFC029;
+  height: 28px;
+  width: 30px;
+
+  & > div > div {
+    padding: 5px;
+  }
+}

@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { readJsonFile } from "./shared/file-helper";
+import { MockFileNames } from "@/constants";
+import { Dashboard } from "@/features/dashboard";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <h3>Dashboard coming soon...</h3>
-    </main>
-  )
+export default async function DashboardPage() {
+  const mockData = await readJsonFile(MockFileNames.DASHBOARD_META) as any;
+
+  return <Dashboard {...mockData}/>;
 }

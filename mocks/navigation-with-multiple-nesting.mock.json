@@ -1,0 +1,50 @@
+{
+  "navItems": [
+    {
+      "displayName": "Dashboard",
+      "path": "/",
+      "icon": "ChartBarIcon"
+    },
+    {
+      "displayName": "Sales",
+      "path": "/sales/overview",
+      "icon": "CircleStackIcon",
+      "subItems": [
+        {
+          "displayName": "Overview",
+          "path": "/sales/overview",
+          "icon": "DocumentMagnifyingGlassIcon"
+        },
+        {
+          "displayName": "Orders",
+          "path": "/sales/orders",
+          "icon": "CloudIcon"
+        }
+      ]
+    },
+    {
+      "displayName": "Customers",
+      "path": "/customers/analytics",
+      "icon": "UsersIcon",
+      "subItems": [
+        {
+          "displayName": "Analytics",
+          "path": "/customers/analytics",
+          "icon": "ArrowTrendingUpIcon"
+        }
+      ]
+    },
+    {
+      "displayName": "Products",
+      "path": "/products/overview",
+      "icon": "RectangleGroupIcon",
+      "subItems": [
+        {
+          "displayName": "Overview",
+          "path": "/products/overview",
+          "icon": "DocumentMagnifyingGlassIcon"
+        }
+      ]
+    }
+  ]
+}

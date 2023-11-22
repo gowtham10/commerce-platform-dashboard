@@ -1,0 +1,99 @@
+.sidebar {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 60px;
+    flex: 2;
+    background: var(--white);
+    height: 92%;
+    color: var(--light-gray);
+    z-index: 999999;
+    left: 7px;
+  }
+
+  &__company {
+    flex: 1;
+    padding: 1rem;
+  }
+
+   &__company-header {
+    display: flex;
+  }
+
+  &__company-logo {
+    color: var(--primary-color);
+  }
+
+  &__company-name {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-gray);
+    font-weight: bold;
+
+  }
+
+  &__nav {
+    flex: 4;
+    padding: 1rem;
+  }
+
+  &__nav-item {
+    padding: 1rem 0;
+
+    & > ul {
+      padding-left: 1rem;
+    }
+  }
+
+  &__nav-link {
+    display: flex;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__nav-link__icon {
+    width: 20px;
+  }
+
+  &__nav-link__text {
+    flex: 1;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+
+  &__nav-link__active {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+
+  &__profile {
+    flex: 1;
+    padding: 1rem;
+    border-top: 1px solid var(--white-smoke);
+  }
+
+  &__profile-container {
+    display: flex;
+    padding-top: 0.25rem;
+  }
+
+  &__profile-name {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+}

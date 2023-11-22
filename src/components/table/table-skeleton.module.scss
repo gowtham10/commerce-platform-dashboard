@@ -1,0 +1,15 @@
+.table {
+  width: 100%;
+  border: 2px solid #ebebeb;
+  border-spacing: 10px;
+  border-collapse: collapse;
+
+  & > thead {
+    border-bottom: 2px solid #ebebeb;
+  }
+
+  & td {
+    padding: 10px;
+  }
+
+}

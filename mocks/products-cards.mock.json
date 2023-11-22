@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "title": "Top Performing Category",
+      "value": "Mobiles",
+      "icon": "StarIcon",
+      "iconColor": "#00aaa0"
+    },
+    {
+      "title": "Most Ordered Product",
+      "value": "Soap",
+      "icon": "ShoppingCartIcon",
+      "iconColor": "#5F27CD",
+      "compareValue": "1500"
+    },
+    {
+      "title": "Least Ordered Product",
+      "value": "Pen",
+      "icon": "ArchiveBoxArrowDownIcon",
+      "iconColor": "#FF5252",
+      "compareValue": "20"
+    },
+    {
+      "title": "Top Rated Product",
+      "value": "iPhone 15",
+      "icon": "HandThumbUpIcon",
+      "iconColor": "#85BB65",
+      "compareValue": "4.5"
+    }
+  ]
+}

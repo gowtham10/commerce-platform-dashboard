@@ -1,0 +1,124 @@
+{
+  "allMetricOptions": [
+    {
+      "label": "Hourly Sales Trend",
+      "value": "HOURLY_SALES_TREND"
+    },
+    {
+      "label": "Revenue (Last 10 Days)",
+      "value": "LAST_10_DAYS_REVENUE"
+    },
+    {
+      "label": "Top 10 Products (Last 10 Days)",
+      "value": "TOP_PRODUCTS"
+    },
+    {
+      "label": "Top 10 Customers (Last 10 Days)",
+      "value": "TOP_CUSTOMERS"
+    },
+    {
+      "label": "Recent Orders",
+      "value": "RECENT_ORDERS"
+    }
+  ],
+  "enabledMetricKeys": [
+    "HOURLY_SALES_TREND",
+    "LAST_10_DAYS_REVENUE",
+    "TOP_PRODUCTS",
+    "TOP_CUSTOMERS",
+    "RECENT_ORDERS"
+  ],
+  "cards": {
+    "request": {
+      "path": "/v1/dashboard/cards",
+      "method": "POST",
+      "payload": {
+        "type": "DASHBOARD_CARDS"
+      }
+    }
+  },
+  "metricDetails": [
+    {
+      "key": "HOURLY_SALES_TREND",
+      "name": "Hourly Sales Trend",
+      "description": "Hourly Sales Trend",
+      "type": "LINE_CHART",
+      "redirectUrl": "/sales/overview",
+      "request": {
+        "path": "/v1/sales",
+        "method": "POST",
+        "polling": "SSE",
+        "payload": {
+          "type": "HOURLY_SALES_TREND"
+        }
+      }
+    },
+    {
+      "key": "LAST_10_DAYS_REVENUE",
+      "name": "Revenue (Last 10 Days)",
+      "description": "Last 10 Days Revenue",
+      "type": "TINY_BAR_CHART",
+      "redirectUrl": "/sales/overview",
+      "request": {
+        "path": "/v1/sales",
+        "method": "POST",
+        "payload": {
+          "type": "LAST_10_DAYS_REVENUE"
+        }
+      }
+    },
+    {
+      "key": "TOP_PRODUCTS",
+      "name": "Top Selling Products (Last 10 Days)",
+      "description": "Top 10 selling products in last 10 days",
+      "type": "NO_FILTER_TABLE",
+      "redirectUrl": "/products/overview",
+      "request": {
+        "path": "/v1/products",
+        "method": "POST",
+        "payload": {
+          "type": "TOP_PRODUCTS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    },
+    {
+      "key": "TOP_CUSTOMERS",
+      "name": "Top Spending Customers (Last 10 Days)",
+      "description": "Top 10 high spending customers in the last 10 days",
+      "type": "NO_FILTER_TABLE",
+      "redirectUrl": "/customers/analytics",
+      "request": {
+        "path": "/v1/customers",
+        "method": "POST",
+        "payload": {
+          "type": "TOP_CUSTOMERS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0,
+          "startDate": "01-11-2023",
+          "endDate": "10-11-2023"
+        }
+      }
+    },
+    {
+      "key": "RECENT_ORDERS",
+      "name": "Recent Orders",
+      "description": "Recent Orders",
+      "type": "NO_FILTER_TABLE",
+      "redirectUrl": "/sales/overview",
+      "request": {
+        "path": "/v1/sales",
+        "method": "POST",
+        "payload": {
+          "type": "RECENT_ORDERS",
+          "order": "DESC",
+          "limit": 10,
+          "offset": 0
+        }
+      }
+    }
+  ]
+}

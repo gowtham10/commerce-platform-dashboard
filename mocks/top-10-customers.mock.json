@@ -1,0 +1,58 @@
+{
+  "headers": [
+    {
+      "key": "customerCode",
+      "title": "Customer Code"
+    },
+    {
+      "key": "name",
+      "title": "Name"
+    },
+    {
+      "key": "totalSpend",
+      "title": "Total Spending"
+    },
+    {
+      "key": "totalPurchased",
+      "title": "Total Purchased"
+    }
+  ],
+  "content": [
+    {
+      "customerCode": "C6001",
+      "name": "Jayla Burgess",
+      "totalPurchased": 300,
+      "totalSpend": "₹1000000"
+    },
+    {
+      "customerCode": "C3331",
+      "name": "Keira Bradley",
+      "totalPurchased": 289,
+      "totalSpend": "₹950000"
+    },
+    {
+      "customerCode": "C2456",
+      "name": "Paris Randall",
+      "totalPurchased": 275,
+      "totalSpend": "₹870000"
+    },
+    {
+      "customerCode": "C6101",
+      "name": "Kayla Fisher",
+      "totalPurchased": 268,
+      "totalSpend": "₹820000"
+    },
+    {
+      "customerCode": "C3221",
+      "name": "Joseph Bradford",
+      "totalPurchased": 260,
+      "totalSpend": "₹810000"
+    },
+    {
+      "customerCode": "C2459",
+      "name": "Anthony Flowers",
+      "totalPurchased": 255,
+      "totalSpend": "₹790000"
+    }
+  ]
+}

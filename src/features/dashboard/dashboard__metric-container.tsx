@@ -17,6 +17,7 @@ export function MetricContainer(props: MetricContainerProps) {
 
   return (
     <div
+      data-test-id="metrics"
       className={`${styles["dashboard__metric-container"]} ${
         redirectUrl ? commonStyles["cursor-pointer"] : ""
       }`}

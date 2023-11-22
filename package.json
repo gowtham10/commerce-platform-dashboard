@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "e2e": "cucumber-js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -23,13 +24,19 @@
     "swr": "^2.2.4"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^10.0.1",
+    "@types/chromedriver": "^81.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-date-range": "^1.4.8",
     "@types/react-dom": "^18",
     "@types/recharts": "^1.8.27",
+    "@types/selenium-webdriver": "^4.1.20",
+    "chromedriver": "^119.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.2",
+    "rgb2hex": "^0.2.5",
+    "selenium-webdriver": "^4.15.0",
     "typescript": "^5"
   }
 }

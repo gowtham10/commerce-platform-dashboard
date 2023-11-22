@@ -24,7 +24,7 @@ export function PageHeader(props: PageHeaderProps) {
         <CubeTransparentIcon height={24} width={24} color="#FFC42A"/>
         {isSidebarOpen && <SidebarWrapper />}
       </div>
-      <h2>{title}</h2>
+      <h2 data-test-id="page-title">{title}</h2>
       {children}
     </section>
   );

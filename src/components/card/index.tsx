@@ -5,7 +5,6 @@ import { constructSWRKey, postFetcher } from "@/helpers";
 import useSWR from "swr";
 import { RequestType } from "../common.interface";
 import { CardSkeleton } from "./card-skeleton";
-import { SummaryCard } from "./summary-card";
 import { SmallCard } from "./small-card";
 
 export function Card<F>(props: CardProps) {
@@ -28,7 +27,7 @@ export function Card<F>(props: CardProps) {
   const cards = cardData || (data as any)?.data;
 
   return (
-    <div className={styles["container"]}>
+    <div data-test-id="cards" className={styles["container"]}>
       {(cards as CardData[])?.map((card: CardData, index: number) => {
         return <SmallCard key={index} {...card} />;
       })}

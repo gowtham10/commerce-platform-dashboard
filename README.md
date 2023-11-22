@@ -34,5 +34,6 @@ yarn start
 ## Documentation
 
 Product note and Design can be found here
-[Prouduct Note](./documents/product-note.md)
-[Design](./documents/design-decisions.md)
+
+* [Prouduct Note](./documents/product-note.md)
+* [Design](./documents/design-decisions.md)

@@ -4,7 +4,6 @@ import {
   CartesianGrid,
   Label,
   Legend,
-  Rectangle,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -49,12 +48,20 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
         <XAxis
           style={{ fontSize: "0.75rem" }}
           stroke="#D1D1D1"
-          dataKey={meta.xAxisKey || "xAxisName"}
-        />
+          dataKey={meta?.xAxisKey || "xAxisName"}
+        >
+          <Label
+            style={{ fontSize: "0.75rem", fontWeight: "normal" }}
+            value={meta?.xAxisLabel || ""}
+            stroke="#D1D1D1"
+            position="left"
+            dy="-10"
+          />
+        </XAxis>
         <YAxis style={{ fontSize: "0.85rem" }} stroke="#D1D1D1">
           <Label
             style={{ fontSize: "0.75rem" }}
-            value="Revenue (₹)"
+            value={meta?.yAxisLabel || "Revenue (₹)"}
             stroke="#D1D1D1"
             angle={-90}
             position="left"
@@ -62,7 +69,7 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
           />
         </YAxis>
         <Tooltip />
-        <Legend style={{fontSize: "0.85rem"}}/>
+        <Legend style={{ fontSize: "0.85rem" }} />
         <Bar
           dataKey={meta.valueKey || "value"}
           fill="#FFC029"

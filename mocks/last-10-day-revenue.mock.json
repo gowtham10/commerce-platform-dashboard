@@ -43,6 +43,7 @@
   ],
   "meta": {
     "valueKey": "Revenue",
+    "xAxisLabel": "Date",
     "xAxisKey": "Date"
   }
 }

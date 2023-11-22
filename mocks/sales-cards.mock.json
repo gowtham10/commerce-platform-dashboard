@@ -6,6 +6,7 @@
       "icon": "BanknotesIcon",
       "iconColor": "#85BB65",
       "indicator": "UP",
+      "isImproved": true,
       "compareValue": "+5%",
       "compareDescription": "(same day last week)"
     },
@@ -15,6 +16,7 @@
       "icon": "ShoppingCartIcon",
       "iconColor": "#5F27CD",
       "indicator": "UP",
+      "isImproved": true,
       "compareValue": "+2%",
       "compareDescription": "(same day last week)"
     },
@@ -24,6 +26,7 @@
       "icon": "CircleStackIcon",
       "iconColor": "#85BB65",
       "indicator": "UP",
+      "isImproved": true,
       "compareValue": "+1%",
       "compareDescription": "(same day last week)"
     },
@@ -33,6 +36,7 @@
       "icon": "BanknotesIcon",
       "iconColor": "#FF5252",
       "indicator": "DOWN",
+      "isImproved": true,
       "compareValue": "-15%",
       "compareDescription": "(same day last week)"
     },
@@ -41,8 +45,9 @@
       "value": "10",
       "icon": "ShoppingCartIcon",
       "iconColor": "#ff7e67",
-      "indicator": "DOWN",
-      "compareValue": "-5%",
+      "indicator": "UP",
+      "isImproved": false,
+      "compareValue": "+5%",
       "compareDescription": "(same day last week)"
     },
     {
@@ -51,6 +56,7 @@
       "icon": "VariableIcon",
       "iconColor": "#00aaa0",
       "indicator": "UP",
+      "isImproved": true,
       "compareValue": "+3%",
       "compareDescription": "(same day last week)"
     }

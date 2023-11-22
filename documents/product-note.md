@@ -27,6 +27,7 @@ The internal tool wil have the layout with company name, navigation and profile 
 ### Dashboard
 
 Dashboard will showcase
+
 Filters
 1. Metrics selection - Dropdown - which helps to customise the metrics to be shown in the dashboard.
 

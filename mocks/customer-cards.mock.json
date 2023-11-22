@@ -6,9 +6,9 @@
       "icon": "UserPlusIcon",
       "iconColor": "#FFB402",
       "indicator": "UP",
+      "isImproved": true,
       "compareValue": "+1%",
-      "compareDescription": "(same day last week)",
-      "redirectUrl": "/customers/analytics"
+      "compareDescription": "(same day last week)"
     },
     {
       "title": "Active Customers",
@@ -16,15 +16,17 @@
       "icon": "UserGroupIcon",
       "iconColor": "#5F27CD",
       "indicator": "DOWN",
+      "isImproved": false,
       "compareValue": "-2%",
       "compareDescription": "(same day last week)"
     },
     {
-      "title": "Inactive Customers",
+      "title": "Repeat Customers",
       "value": "150",
-      "icon": "UserIcon",
+      "icon": "UsersIcon",
       "iconColor": "#FF5252",
       "indicator": "UP",
+      "isImproved": true,
       "compareValue": "+8%",
       "compareDescription": "(same day last week)"
     }

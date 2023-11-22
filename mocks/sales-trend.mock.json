@@ -51,6 +51,7 @@
   ],
   "meta": {
     "valueKey": "Revenue",
+    "xAxisLabel": "Hrs",
     "xAxisKey": "Hour"
   }
 }

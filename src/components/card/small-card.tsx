@@ -15,6 +15,7 @@ export function SmallCard(props: SmallCardProps) {
     value,
     compareValue,
     indicator,
+    isImproved = false,
     icon,
     iconColor = "#000",
     compareDescription,
@@ -30,23 +31,27 @@ export function SmallCard(props: SmallCardProps) {
     }
   };
 
-  if (compareValue && indicator) {
+  if (compareValue) {
     const IndicatorIcon = indicator === "UP"
       ? ArrowSmallUpIcon
       : ArrowSmallDownIcon;
+
     compareHtml = (
       <div
         className={`${styles["smallcard__compare-container"]} ${
-          styles[
-            indicator === "UP"
-              ? "smallcard__compare__up"
-              : "smallcard__compare__down"
-          ]
+          indicator
+            ? styles[
+              isImproved ? "smallcard__compare__up" : "smallcard__compare__down"
+            ]
+            : ""
         }`}
       >
-        <div style={{ display: "flex", "alignItems": "flex-start" }}>
-          <IndicatorIcon width={15} height={15} />
-        </div>
+        {indicator &&
+          (
+            <div style={{ display: "flex", "alignItems": "flex-start" }}>
+              <IndicatorIcon width={15} height={15} />
+            </div>
+          )}
         <span>{compareValue}</span>
         {compareDescription && (
           <span className={styles["smallcard__compare-description"]}>

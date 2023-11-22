@@ -48,14 +48,22 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
         <XAxis
           stroke="#D1D1D1"
           style={{ fontSize: "0.75rem" }}
-          dataKey={meta.xAxisKey || "xAxisName"}
-        />
+          dataKey={meta?.xAxisKey || "xAxisName"}
+        >
+          <Label
+            style={{ fontSize: "0.75rem" }}
+            value={meta?.xAxisLabel || ""}
+            stroke="#D1D1D1"
+            position="left"
+            dy="-10"
+          />
+        </XAxis>
         <YAxis style={{ fontSize: "0.75rem" }} stroke="#D1D1D1">
           <Label
-            value="Revenue (₹)"
+            value={meta?.yAxisLabel || "Revenue (₹)"}
             stroke="#D1D1D1"
             angle={-90}
-            style={{fontSize: "0.85rem"}}
+            style={{ fontSize: "0.85rem" }}
             position="left"
             dy="-10"
           />

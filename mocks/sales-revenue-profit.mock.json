@@ -57,6 +57,7 @@
   ],
   "meta": {
     "xAxisKey": "Category",
+    "xAxisLabel": "Category",
     "totalValueKey": "Revenue",
     "valueKey": "Profit"
   }

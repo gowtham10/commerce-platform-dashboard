@@ -9,6 +9,7 @@ export interface CardData {
   iconColor?: string;
   compareDescription?: string;
   redirectUrl?: string;
+  isImproved?: boolean;
 }
 
 export type SummaryCardProps = CardData;

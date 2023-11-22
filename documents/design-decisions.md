@@ -2,7 +2,7 @@
 
 Building fully config driven FE application.
 
-## Techstack
+## Techstack, Frameworks
     1. NextJs Framework with typescript + react
     
     2. Is sepeate state management like Redux needed ? - No
@@ -31,7 +31,7 @@ Layout can be found here [Layout](./layout.png)
 * `Navigation`, `Cards section` and `Metrics Section` in the layout are `config driven section`.
 * `All the cards` in the cards section are retrieved using `single api call`.
 * `Metrics` in the metrics section are retrieved using `seperate api call`. (eg. if metrics section has 3 metrics, 3 api calls are made.)
-* `All the components` have their corresponding `skeletons html`. 
+* `All the components` have their corresponding `skeleton html`. 
 * `Nested navigation` is supported
 * From the `Dashboard` page, can be redirected to other dashboards by `clicking` either on the `Card or Metric`.
 * `localstorage` is included in all the pages with `seperate keys` to store the `filters`. When the page reloads the selected filters are applied. 
@@ -39,5 +39,6 @@ Layout can be found here [Layout](./layout.png)
 all the mock configuration and sample data can be found here [mocks](../mocks/)
 
 ## Folder Structure
-[Link](./folder_structure.png)
+
+* [Link](./folder_structure.png)
 

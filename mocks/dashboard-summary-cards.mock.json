@@ -7,6 +7,7 @@
       "iconColor": "#85BB65",
       "indicator": "UP",
       "compareValue": "+5%",
+      "isImproved": true,
       "compareDescription": "(same day last week)",
       "redirectUrl": "/sales/overview"
     },
@@ -17,6 +18,7 @@
       "iconColor": "#5F27CD",
       "indicator": "DOWN",
       "compareValue": "-2%",
+      "isImproved": false,
       "compareDescription": "(same day last week)",
       "redirectUrl": "/products/overview"
     },
@@ -27,6 +29,7 @@
       "iconColor": "#FFB402",
       "indicator": "UP",
       "compareValue": "+1%",
+      "isImproved": true,
       "compareDescription": "(same day last week)",
       "redirectUrl": "/customers/analytics"
     }

@@ -23,6 +23,8 @@
   ],
   "meta": {
     "valueKey": "Count",
+    "xAxisLabel": "Channels",
+    "yAxisLabel": "Count",
     "xAxisKey": "Channel"
   }
 }

@@ -11,21 +11,24 @@
       "value": "Soap",
       "icon": "ShoppingCartIcon",
       "iconColor": "#5F27CD",
-      "compareValue": "1500"
+      "compareValue": "1500",
+      "compareDescription": "units"
     },
     {
       "title": "Least Ordered Product",
       "value": "Pen",
       "icon": "ArchiveBoxArrowDownIcon",
       "iconColor": "#FF5252",
-      "compareValue": "20"
+      "compareValue": "20",
+      "compareDescription": "units"
     },
     {
       "title": "Top Rated Product",
       "value": "iPhone 15",
       "icon": "HandThumbUpIcon",
       "iconColor": "#85BB65",
-      "compareValue": "4.5"
+      "compareValue": "4.5",
+      "compareDescription": "ratings"
     }
   ]
 }

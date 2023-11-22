@@ -8,7 +8,7 @@
       "indicator": "UP",
       "isImproved": true,
       "compareValue": "+5%",
-      "compareDescription": "(same day last week)"
+      "compareDescription": "{{comparisonText}}"
     },
     {
       "title": "Products Sold",
@@ -18,7 +18,7 @@
       "indicator": "UP",
       "isImproved": true,
       "compareValue": "+2%",
-      "compareDescription": "(same day last week)"
+      "compareDescription": "{{comparisonText}}"
     },
     {
       "title": "Total Profit",
@@ -28,7 +28,7 @@
       "indicator": "UP",
       "isImproved": true,
       "compareValue": "+1%",
-      "compareDescription": "(same day last week)"
+      "compareDescription": "{{comparisonText}}"
     },
         {
       "title": "Total Refunds",
@@ -38,7 +38,7 @@
       "indicator": "DOWN",
       "isImproved": true,
       "compareValue": "-15%",
-      "compareDescription": "(same day last week)"
+      "compareDescription": "{{comparisonText}}"
     },
     {
       "title": "Total Products Returned",
@@ -48,7 +48,7 @@
       "indicator": "UP",
       "isImproved": false,
       "compareValue": "+5%",
-      "compareDescription": "(same day last week)"
+      "compareDescription": "{{comparisonText}}"
     },
     {
       "title": "Conversion Rate",
@@ -58,7 +58,7 @@
       "indicator": "UP",
       "isImproved": true,
       "compareValue": "+3%",
-      "compareDescription": "(same day last week)"
+      "compareDescription": "{{comparisonText}}"
     }
   ]
 }

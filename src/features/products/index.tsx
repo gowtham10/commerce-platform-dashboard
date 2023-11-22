@@ -13,16 +13,22 @@ import {
 } from "@/components/select/select-components";
 import { RangeDatePicker } from "@/components/date-picker/range-date-picker";
 import { useEffect, useState } from "react";
-import { filterSelectedOptions, formatDate, getItem, getSelectedValues, setItem } from "@/helpers";
+import {
+  filterSelectedOptions,
+  formatDate,
+  getItem,
+  getSelectedValues,
+  setItem,
+} from "@/helpers";
 import { LocalStorageKeys } from "@/constants/localstorage-keys";
 
 export function ProductPerformance(props: ProductProps) {
-  const { cards, metricDetails, enabledCategories = [], allCategories= [{ label: "Electronics", value: "Electronics" }] } = props;
+  const { cards, metricDetails, enabledCategories = [], allCategories } = props;
 
   const [filters, setFilters] = useState({
     startDate: new Date(),
     endDate: new Date(),
-    categories: [],
+    categories: enabledCategories,
   } as any);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -39,7 +45,9 @@ export function ProductPerformance(props: ProductProps) {
       setFilters({
         startDate: formattedStartDate,
         endDate: formattedEndDate,
-        categories: storedCategories?.split(",") || [],
+        categories: storedCategories
+          ? storedCategories?.split(",")
+          : enabledCategories,
       });
     }
     setShowFilters(true);

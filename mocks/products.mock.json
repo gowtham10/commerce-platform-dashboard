@@ -8,6 +8,40 @@
       }
     }
   },
+  "allCategories": [
+    {
+      "label": "Mobiles",
+      "value": "mobiles"
+    },
+    {
+      "label": "Books",
+      "value": "books"
+    },
+    {
+      "label": "Food & Beverage",
+      "value": "food_beverage"
+    },
+    {
+      "label": "Electronics",
+      "value": "electronics"
+    },
+    {
+      "label": "Clothing",
+      "value": "clothing"
+    },
+    {
+      "label": "Appliances",
+      "value": "appliances"
+    }
+  ],
+  "enabledCategories": [
+    "mobiles",
+    "books",
+    "food_beverage",
+    "electronics",
+    "clothing",
+    "appliances"
+  ],
   "metricDetails": [
     {
       "key": "TOP_PRODUCTS",

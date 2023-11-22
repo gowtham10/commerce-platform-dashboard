@@ -6,6 +6,8 @@ type ProductMetricDetails = MetricDetails & { key: string };
 export interface ProductProps {
   metricDetails: ProductMetricDetails[];
   cards?: CardProps;
+  allCategories: any[];
+  enabledCategories: string[];
 }
 
 

@@ -10,3 +10,4 @@ export enum ComponentTypeKeys {
   PIE_CHART = "PIE_CHART",
   LINE_CHART = "LINE_CHART",
 }
+

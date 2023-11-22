@@ -23,7 +23,6 @@ export function DatePicker(props: any) {
   ]);
 
   const handleSelection = (item: any) => {
-    console.log(item, "item");
     setState([item.selection]);
     handleDateChange &&
       handleDateChange(item.selection.startDate, item.selection.endDate);

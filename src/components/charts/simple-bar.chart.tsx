@@ -47,9 +47,9 @@ export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis stroke="#D1D1D1" dataKey={meta?.xAxisKey || "xAxisName"} />
-          <YAxis stroke="#D1D1D1">
-            <Label value="Amount (₹)" stroke="#D1D1D1" angle={-90} position="left" dy="-10" />
+          <XAxis style={{fontSize: "0.75rem"}} stroke="#D1D1D1" dataKey={meta?.xAxisKey || "xAxisName"} />
+          <YAxis style={{fontSize: "0.75rem"}} stroke="#D1D1D1">
+            <Label value="Amount (₹)" style={{fontSize: "0.85rem"}} stroke="#D1D1D1" angle={-90} position="left" dy="-10" />
           </YAxis>
           <Tooltip />
           <Legend />

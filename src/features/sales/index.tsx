@@ -5,7 +5,9 @@ import { Card } from "@/components/card";
 import { SalesProps } from "./sales.interface";
 import { MetricContainer } from "../dashboard/dashboard__metric-container";
 import { RangeDatePicker } from "@/components/date-picker/range-date-picker";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { formatDate, getItem, setItem } from "@/helpers";
+import { LocalStorageKeys } from "@/constants/localstorage-keys";
 
 export function SalesOverview(props: SalesProps) {
   const { cards, metricDetails } = props;
@@ -14,10 +16,25 @@ export function SalesOverview(props: SalesProps) {
     startDate: new Date(),
     endDate: new Date(),
   } as any);
+  const [showFilters, setShowFilters] = useState(false);
 
   const handleDateChange = (startDate: Date, endDate: Date) => {
     setFilters({ startDate, endDate });
+    setItem(LocalStorageKeys.SALES_START_DATE, formatDate(startDate));
+    setItem(LocalStorageKeys.SALES_END_DATE, formatDate(endDate));
   };
+
+  useEffect(() => {
+    const storedStartDate = getItem(LocalStorageKeys.SALES_START_DATE);
+    const storedEndDate = getItem(LocalStorageKeys.SALES_END_DATE);
+
+    if (storedStartDate && storedEndDate) {
+      const formattedStartDate = new Date(storedStartDate);
+      const formattedEndDate = new Date(storedEndDate);
+      setFilters({ startDate: formattedStartDate, endDate: formattedEndDate });
+    }
+    setShowFilters(true);
+  }, []);
 
   return (
     <section className={styles["sales"]}>
@@ -26,7 +43,14 @@ export function SalesOverview(props: SalesProps) {
           <PageHeader title="Sales Overview" />
         </div>
         <div>
-          <RangeDatePicker handleDateChange={handleDateChange} />
+          {showFilters &&
+            (
+              <RangeDatePicker
+                handleDateChange={handleDateChange}
+                initialStartDate={filters?.startDate}
+                initialEndDate={filters?.endDate}
+              />
+            )}
         </div>
       </div>
       <div className={styles["sales__content"]}>

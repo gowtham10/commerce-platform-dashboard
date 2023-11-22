@@ -2,8 +2,8 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  Legend,
   Label,
+  Legend,
   Rectangle,
   ResponsiveContainer,
   Tooltip,
@@ -30,14 +30,14 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
     return <BarChartSkeleton />;
   }
 
-  const {data, meta} = (chartData || fetchedData as any || {});
+  const { data, meta } = chartData || fetchedData as any || {};
 
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
         width={500}
         height={300}
-        data={ data as TinyBarChartData[]}
+        data={data as TinyBarChartData[]}
         margin={{
           top: 5,
           right: 30,
@@ -46,12 +46,23 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis stroke="#D1D1D1" dataKey={meta.xAxisKey || "xAxisName"} />
-        <YAxis stroke="#D1D1D1">
-          <Label value="Revenue (₹)" stroke="#D1D1D1" angle={-90} position="left" dy="-10" />
+        <XAxis
+          style={{ fontSize: "0.75rem" }}
+          stroke="#D1D1D1"
+          dataKey={meta.xAxisKey || "xAxisName"}
+        />
+        <YAxis style={{ fontSize: "0.85rem" }} stroke="#D1D1D1">
+          <Label
+            style={{ fontSize: "0.75rem" }}
+            value="Revenue (₹)"
+            stroke="#D1D1D1"
+            angle={-90}
+            position="left"
+            dy="-10"
+          />
         </YAxis>
         <Tooltip />
-        <Legend />
+        <Legend style={{fontSize: "0.85rem"}}/>
         <Bar
           dataKey={meta.valueKey || "value"}
           fill="#FFC029"

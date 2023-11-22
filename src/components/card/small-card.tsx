@@ -59,9 +59,9 @@ export function SmallCard(props: SmallCardProps) {
 
   return (
     <div
-      className={`${styles.smallcard} ${
-        redirectUrl ? commonStyles["cursor-pointer"] : ""
-      }`}
+      className={`${
+        commonStyles[redirectUrl ? "cursor-pointer" : "cursor-default"]
+      } ${styles.smallcard}`}
       onClick={handleClick}
     >
       <div>

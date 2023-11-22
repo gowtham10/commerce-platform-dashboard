@@ -1,9 +1,9 @@
 import {
+  CartesianGrid,
+  Label,
+  Legend,
   Line,
   LineChart,
-  CartesianGrid,
-  Legend,
-  Label,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -29,14 +29,14 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
     return <BarChartSkeleton />;
   }
 
-  const {data, meta} = (chartData || fetchedData as any || {});
+  const { data, meta } = chartData || fetchedData as any || {};
 
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart
         width={500}
         height={300}
-        data={ data as SimpleLineChartData[]}
+        data={data as SimpleLineChartData[]}
         margin={{
           top: 5,
           right: 30,
@@ -45,9 +45,20 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis stroke="#D1D1D1" dataKey={meta.xAxisKey || "xAxisName"} />
-        <YAxis stroke="#D1D1D1">
-          <Label value="Revenue (₹)" stroke="#D1D1D1" angle={-90} position="left" dy="-10" />
+        <XAxis
+          stroke="#D1D1D1"
+          style={{ fontSize: "0.75rem" }}
+          dataKey={meta.xAxisKey || "xAxisName"}
+        />
+        <YAxis style={{ fontSize: "0.75rem" }} stroke="#D1D1D1">
+          <Label
+            value="Revenue (₹)"
+            stroke="#D1D1D1"
+            angle={-90}
+            style={{fontSize: "0.85rem"}}
+            position="left"
+            dy="-10"
+          />
         </YAxis>
         <Tooltip />
         <Legend />
@@ -60,4 +71,3 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
     </ResponsiveContainer>
   );
 }
-

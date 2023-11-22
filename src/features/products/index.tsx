@@ -12,25 +12,55 @@ import {
   getValueContainer,
 } from "@/components/select/select-components";
 import { RangeDatePicker } from "@/components/date-picker/range-date-picker";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { filterSelectedOptions, formatDate, getItem, getSelectedValues, setItem } from "@/helpers";
+import { LocalStorageKeys } from "@/constants/localstorage-keys";
 
 export function ProductPerformance(props: ProductProps) {
-  const { cards, metricDetails } = props;
+  const { cards, metricDetails, enabledCategories = [], allCategories= [{ label: "Electronics", value: "Electronics" }] } = props;
 
   const [filters, setFilters] = useState({
     startDate: new Date(),
     endDate: new Date(),
     categories: [],
   } as any);
-  const [selectedCategories, setSelectedCategories] = useState([] as any[]);
+  const [showFilters, setShowFilters] = useState(false);
 
-  const handleDateChange = (startDate: Date, endDate: Date) => (setFilters({...filters, startDate, endDate}));
+  useEffect(() => {
+    const storedStartDate = getItem(LocalStorageKeys.PRODUCT_START_DATE);
+    const storedEndDate = getItem(LocalStorageKeys.PRODUCT_END_DATE);
+    const storedCategories = getItem(
+      LocalStorageKeys.PRODUCTS_SELECTED_CATEGORY,
+    );
+
+    if (storedStartDate && storedEndDate) {
+      const formattedStartDate = new Date(storedStartDate);
+      const formattedEndDate = new Date(storedEndDate);
+      setFilters({
+        startDate: formattedStartDate,
+        endDate: formattedEndDate,
+        categories: storedCategories?.split(",") || [],
+      });
+    }
+    setShowFilters(true);
+  }, []);
+
+  const handleDateChange = (
+    startDate: Date,
+    endDate: Date,
+  ) => {
+    setFilters({ ...filters, startDate, endDate });
+    setItem(LocalStorageKeys.CUSTOMERS_START_DATE, formatDate(startDate));
+    setItem(LocalStorageKeys.CUSTOMERS_END_DATE, formatDate(endDate));
+  };
 
   const handleCategorySelection = (selectedOptions: any) => {
-    const updatedCategories = selectedOptions?.map((selectedOption: any) => selectedOption?.value);
-    setSelectedCategories(updatedCategories);
-    setFilters({...filters, categories: updatedCategories});
-  }
+    const updatedCategories = selectedOptions?.map((selectedOption: any) =>
+      selectedOption?.value
+    );
+    setFilters({ ...filters, categories: updatedCategories });
+    setItem(LocalStorageKeys.PRODUCTS_SELECTED_CATEGORY, updatedCategories);
+  };
 
   return (
     <section className={styles["products"]}>
@@ -38,20 +68,33 @@ export function ProductPerformance(props: ProductProps) {
         <div>
           <PageHeader title="Product Performance" />
         </div>
-        <div className={styles["products__filters"]}>
-          <SimpleControlSelect
-            options={[{label: "Electronics", value: "Electronics"}]}
-            initialSelectedOptions={[]}
-            handleSelection={handleCategorySelection}
-            customComponents={{
-              ValueContainer: getValueContainer("Categories Selected: "),
-              Option: getCheckboxOption(),
-              IndicatorsContainer: getIndicatorsContainer(),
-              DropdownIndicator: getDropdownIndicator(),
-            }}
-          />
-          <RangeDatePicker handleDateChange={handleDateChange} />
-        </div>
+        {showFilters &&
+          (
+            <div className={styles["products__filters"]}>
+              <SimpleControlSelect
+                options={allCategories}
+                initialSelectedOptions={filterSelectedOptions(
+                  allCategories,
+                  getSelectedValues(
+                    enabledCategories,
+                    LocalStorageKeys?.PRODUCTS_SELECTED_CATEGORY,
+                  ),
+                )}
+                handleSelection={handleCategorySelection}
+                customComponents={{
+                  ValueContainer: getValueContainer("Categories Selected: "),
+                  Option: getCheckboxOption(),
+                  IndicatorsContainer: getIndicatorsContainer(),
+                  DropdownIndicator: getDropdownIndicator(),
+                }}
+              />
+              <RangeDatePicker
+                initialStartDate={filters?.startDate}
+                initialEndDate={filters?.endDate}
+                handleDateChange={handleDateChange}
+              />
+            </div>
+          )}
       </div>
       <div className={styles["products__content"]}>
         <div className={styles["products__row"]}>

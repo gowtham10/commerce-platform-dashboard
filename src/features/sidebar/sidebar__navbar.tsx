@@ -6,7 +6,7 @@ import { NavMenu } from './sidebar__nav-menu';
 export function NavBar (props: NavProps) {
   const { navItems } = props;
   return (
-    <nav className={styles['sidebar__nav']}>
+    <nav data-test-id='nav' className={styles['sidebar__nav']}>
       <NavMenu navItems={navItems} />
     </nav>
   )

@@ -12,7 +12,12 @@ import {
   getIndicatorsContainer,
   getValueContainer,
 } from "@/components/select/select-components";
-import { filterSelectedOptions, getItem, getSelectedValues, setItem } from "@/helpers";
+import {
+  filterSelectedOptions,
+  getItem,
+  getSelectedValues,
+  setItem,
+} from "@/helpers";
 import { LocalStorageKeys } from "@/constants/localstorage-keys";
 
 export function Dashboard(props: DashboardProps) {
@@ -49,11 +54,17 @@ export function Dashboard(props: DashboardProps) {
         <div>
           <PageHeader title="Dashboard" />
         </div>
-        <div>
-          {showFilters && (
+        {showFilters && (
+          <div data-test-id="simple-select">
             <SimpleControlSelect
               options={allMetricOptions}
-              initialSelectedOptions={filterSelectedOptions(allMetricOptions, getSelectedValues(enabledMetricKeys, LocalStorageKeys?.DASHBOARD_SELECTED_METRICS))}
+              initialSelectedOptions={filterSelectedOptions(
+                allMetricOptions,
+                getSelectedValues(
+                  enabledMetricKeys,
+                  LocalStorageKeys?.DASHBOARD_SELECTED_METRICS,
+                ),
+              )}
               handleSelection={handleMetricSelection}
               customComponents={{
                 ValueContainer: getValueContainer("Metrics Selected: "),
@@ -62,8 +73,8 @@ export function Dashboard(props: DashboardProps) {
                 IndicatorsContainer: getIndicatorsContainer(),
               }}
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
       <div className={styles["dashboard__content"]}>
         <div className={styles["dashboard__row"]}>

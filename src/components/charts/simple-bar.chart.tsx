@@ -55,8 +55,8 @@ export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
             <Label
               style={{ fontSize: "0.75rem" }}
               value={meta?.xAxisLabel || ""}
-              stroke="#D1D1D1"
-              position="left"
+              stroke="#808e9b"
+              position={{ x: -20, y: 30 }}
               dy="-10"
             />
           </XAxis>
@@ -64,7 +64,7 @@ export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
             <Label
               value={meta?.yAxisLabel || "Amount (₹)"}
               style={{ fontSize: "0.85rem" }}
-              stroke="#D1D1D1"
+              stroke="#808e9b"
               angle={-90}
               position="left"
               dy="-10"

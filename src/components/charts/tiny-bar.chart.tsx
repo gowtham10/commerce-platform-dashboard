@@ -53,16 +53,16 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
           <Label
             style={{ fontSize: "0.75rem", fontWeight: "normal" }}
             value={meta?.xAxisLabel || ""}
-            stroke="#D1D1D1"
-            position="left"
+            stroke="#808e9b"
             dy="-10"
+            position={{ x: -20, y: 30 }}
           />
         </XAxis>
         <YAxis style={{ fontSize: "0.85rem" }} stroke="#D1D1D1">
           <Label
             style={{ fontSize: "0.75rem" }}
             value={meta?.yAxisLabel || "Revenue (₹)"}
-            stroke="#D1D1D1"
+            stroke="#808e9b"
             angle={-90}
             position="left"
             dy="-10"

@@ -8,4 +8,5 @@ export enum ComponentTypeKeys {
   TINY_BAR_CHART = "TINY_BAR_CHART",
   NO_FILTER_TABLE = "NO_FILTER_TABLE",
   PIE_CHART = "PIE_CHART",
+  LINE_CHART = "LINE_CHART",
 }

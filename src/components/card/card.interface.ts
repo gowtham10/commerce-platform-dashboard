@@ -12,6 +12,7 @@ export interface CardData {
 }
 
 export type SummaryCardProps = CardData;
+export type SmallCardProps = CardData;
 
 export interface CardProps {
   request?: RequestType;

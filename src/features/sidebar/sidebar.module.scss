@@ -9,9 +9,9 @@
     position: absolute;
     top: 60px;
     flex: 2;
-    background: #FFF;
+    background: var(--white);
     height: 92%;
-    color: #D1D1D1;
+    color: var(--light-gray);
     z-index: 999999;
     left: 7px;
   }
@@ -26,7 +26,7 @@
   }
 
   &__company-logo {
-    color: #FFC42A;
+    color: var(--primary-color);
   }
 
   &__company-name {
@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #535353;
+    color: var(--dark-gray);
     font-weight: bold;
 
   }
@@ -56,7 +56,7 @@
     display: flex;
 
     &:hover {
-      color: #FFC42A;
+      color: var(--primary-color);
     }
   }
 
@@ -74,14 +74,14 @@
 
 
   &__nav-link__active {
-    color: #FFC42A;
+    color: var(--primary-color);
     font-weight: bold;
   }
 
   &__profile {
     flex: 1;
     padding: 1rem;
-    border-top: 1px solid #F7F7F7;
+    border-top: 1px solid var(--white-smoke);
   }
 
   &__profile-container {
@@ -93,7 +93,7 @@
     padding-left: 10px;
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
 }

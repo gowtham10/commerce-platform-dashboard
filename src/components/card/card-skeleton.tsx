@@ -1,4 +1,5 @@
 import styles from "./card.module.scss";
+import { SmallCardSkeleton } from "./smallcard-skeleton";
 import { SummaryCardSkeleton } from "./summarycard-skeleton";
 
 export function CardSkeleton(props: { count?: number }) {
@@ -7,7 +8,7 @@ export function CardSkeleton(props: { count?: number }) {
   return (
     <div className={styles["card__skeleton"]}>
       {Array(count).fill(null).map((_, index: number) => (
-        <SummaryCardSkeleton key={index} />
+        <SmallCardSkeleton key={index} />
       ))}
     </div>
   );

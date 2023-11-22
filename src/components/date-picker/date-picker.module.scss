@@ -1,11 +1,11 @@
 .picker {
   & span {
-    color: #535353;
+    color: var(--dark-gray);
   }
 
   & input {
-    background: #FFF;
-    color: #535353;
+    background: var(--white);
+    color: var(--dark-gray);
   }
 
   &__container {
@@ -21,6 +21,7 @@
   display: flex;
   gap: 8px;
   cursor: pointer;
+  color: var(--secondary-color);
 
   &__date-range {
     display: flex;

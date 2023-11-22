@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  Label,
   Legend,
   ResponsiveContainer,
   Tooltip,
@@ -46,15 +47,17 @@ export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey={meta?.xAxisKey || "xAxisName"} />
-          <YAxis />
+          <XAxis stroke="#D1D1D1" dataKey={meta?.xAxisKey || "xAxisName"} />
+          <YAxis stroke="#D1D1D1">
+            <Label value="Amount (₹)" stroke="#D1D1D1" angle={-90} position="left" dy="-10" />
+          </YAxis>
           <Tooltip />
           <Legend />
           <Bar
             dataKey={meta?.totalValueKey || "totalValue"}
-            fill="#8884d8"
+            fill="#FFC029"
           />
-          <Bar dataKey={meta?.valueKey || "value"} fill="#82ca9d" />
+          <Bar dataKey={meta?.valueKey || "value"} fill="#8884d8" />
         </BarChart>
       </ResponsiveContainer>
     </>

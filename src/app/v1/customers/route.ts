@@ -1,4 +1,4 @@
-import { handleFilters, readJsonFile } from "@/app/shared/file-helper";
+import { handleFilters, readJsonFile } from "@/app/shared/mock-helper";
 import { MockFileNames } from "@/constants";
 import { NextResponse } from "next/server";
 

@@ -3,62 +3,76 @@
     {
       "Category": "Electronics",
       "Revenue": 100000,
-      "Profit": 70000,
-      "Currency": "INR"
+      "Profit": 70000
     },
     {
       "Category": "Shoes",
       "Revenue": 50000,
-      "Profit": 35000,
-      "Currency": "INR"
+      "Profit": 35000
     },
     {
       "Category": "Computer",
       "Revenue": 25000,
-      "Profit": 17500,
-      "Currency": "INR"
+      "Profit": 17500
     },
     {
       "Category": "Clothing",
       "Revenue": 15000,
-      "Profit": 7500,
-      "Currency": "INR"
+      "Profit": 7500
     },
     {
       "Category": "Appliances",
       "Revenue": 34000,
-      "Profit": 22000,
-      "Currency": "INR"
+      "Profit": 22000
     },
     {
       "Category": "Mobiles",
       "Revenue": 55000,
-      "Profit": 38000,
-      "Currency": "INR"
+      "Profit": 38000
     },
     {
       "Category": "Books",
       "Revenue": 35000,
-      "Profit": 17000,
-      "Currency": "INR"
+      "Profit": 17000
     },
     {
       "Category": "Personal Care",
       "Revenue": 32500,
-      "Profit": 16000,
-      "Currency": "INR"
+      "Profit": 16000
     },
     {
       "Category": "Food & Beverage",
       "Revenue": 27500,
-      "Profit": 18700,
-      "Currency": "INR"
+      "Profit": 18700
     }
   ],
   "meta": {
     "xAxisKey": "Category",
     "xAxisLabel": "Category",
     "totalValueKey": "Revenue",
-    "valueKey": "Profit"
+    "valueKey": "Profit",
+    "tooltip": {
+      "prefix": "₹"
+    }
+  },
+  "mock": {
+    "metaData": [
+      {
+        "key": "Revenue",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 50000,
+          "max": 200000
+        }
+      },
+      {
+        "key": "Profit",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 30000,
+          "max": 150000
+        }
+      }
+    ]
   }
 }

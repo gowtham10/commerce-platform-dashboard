@@ -15,6 +15,7 @@ import { BarChartSkeleton } from "./bar-skeleton";
 import useSWR from "swr";
 import { constructSWRKey, postFetcher } from "@/helpers";
 import { RequestType } from "../common.interface";
+import { CustomTooltip } from "./custom-label";
 
 export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
   const { data: chartData, request, filters } = props;
@@ -70,7 +71,7 @@ export function SimpleBarChart<F>(props: SimpleBarChartProps<F>) {
               dy="-10"
             />
           </YAxis>
-          <Tooltip />
+          <Tooltip content={<CustomTooltip meta={meta?.tooltip}/>}/>
           <Legend />
           <Bar
             dataKey={meta?.totalValueKey || "totalValue"}

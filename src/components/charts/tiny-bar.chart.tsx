@@ -14,6 +14,7 @@ import { TinyBarChartData, TinyBarChartProps } from "./charts.interface";
 import useSWR from "swr";
 import { constructSWRKey, postFetcher } from "@/helpers";
 import { RequestType } from "../common.interface";
+import { CustomTooltip } from "./custom-label";
 
 export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
   const { data: chartData, request, filters } = props;
@@ -68,10 +69,10 @@ export function TinyBarChart<F>(props: TinyBarChartProps<F>) {
             dy="-10"
           />
         </YAxis>
-        <Tooltip />
+        <Tooltip content={<CustomTooltip meta={meta?.tooltip} />}/>
         <Legend style={{ fontSize: "0.85rem" }} />
         <Bar
-          dataKey={meta.valueKey || "value"}
+          dataKey={meta?.valueKey || "value"}
           fill="#FFC029"
         />
       </BarChart>

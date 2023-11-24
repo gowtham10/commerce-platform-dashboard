@@ -48,5 +48,17 @@
     "tooltip": {
       "prefix": "₹"
     }
+  },
+  "mock": {
+    "metaData": [
+      {
+        "key": "Revenue",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 50000,
+          "max": 200000
+        }
+      }
+    ]
   }
 }

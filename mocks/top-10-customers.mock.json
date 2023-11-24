@@ -54,5 +54,31 @@
       "totalPurchased": 255,
       "totalSpend": "₹790000"
     }
-  ]
+  ],
+  "mock": {
+    "metaData": [
+      {
+        "key": "totalPurchase",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 25,
+          "max": 1000
+        }
+      },
+      {
+        "key": "totalSpend",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 10000,
+          "max": 500000,
+          "prefix": "₹"
+        }
+      }
+    ],
+    "dataKey": "content",
+    "sort": {
+      "key": "revenue",
+      "order": "desc"
+    }
+  }
 }

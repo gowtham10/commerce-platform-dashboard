@@ -69,8 +69,8 @@
         "key": "Profit",
         "functionType": "DEFAULT",
         "options": {
-          "min": 30000,
-          "max": 150000
+          "max": "Revenue",
+          "min": 30000
         }
       }
     ]

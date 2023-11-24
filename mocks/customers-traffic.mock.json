@@ -26,5 +26,17 @@
     "xAxisLabel": "Channels",
     "yAxisLabel": "Count",
     "xAxisKey": "Channel"
+  },
+  "mock": {
+    "metaData": [
+      {
+        "key": "Count",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 200,
+          "max": 20000
+        }
+      }
+    ]
   }
 }

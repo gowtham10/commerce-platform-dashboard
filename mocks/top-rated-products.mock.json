@@ -60,6 +60,18 @@
       "totalReviews": 1500,
       "averageRating": "4"
     }
-  ]
+  ],
+  "mock": {
+    "metaData": [
+      {
+        "key": "totalReviews",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 350,
+          "max": 1500
+        }
+      }
+    ],
+    "dataKey": "content"
+  }
 }
-

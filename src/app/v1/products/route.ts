@@ -1,13 +1,11 @@
-import { readJsonFile } from "@/app/shared/mock-helper";
-import { MockFileNames } from "@/constants";
+import { constructProductsMockData } from "@/app/shared/mock-helper";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { type } = body;
-  const mockData = await readJsonFile(
-    MockFileNames[type as keyof typeof MockFileNames],
-  ) as any;
+  const { type, filters } = body;
 
-  return NextResponse.json({ ...mockData });
+  return NextResponse.json({
+    ...await constructProductsMockData(type, filters),
+  });
 }

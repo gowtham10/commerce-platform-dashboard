@@ -16,12 +16,10 @@ The internal tool wil have the layout with company name, navigation and profile 
 - Navigation will have the links to navigate to the respective dashboard, find the navigation order below,
 
     1. Dashboard - /
-    2. Sales 
-        2.1 Overview - /sales/overview
-    3. Products
-        3.1 Overview - /products/overview
+    2. Sales - /sales/overview
+    3. Products - /products/overview
     4. Customers
-        4.1 Overview - /customers/overview
+        4.1 Analytics - /customers/analytics
 
 ---
 ### Dashboard

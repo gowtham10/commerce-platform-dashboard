@@ -52,6 +52,9 @@
   "meta": {
     "valueKey": "Revenue",
     "xAxisLabel": "Hrs",
-    "xAxisKey": "Hour"
+    "xAxisKey": "Hour",
+    "tooltip": {
+      "prefix": "₹"
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { readJsonFile } from "@/app/shared/file-helper";
+import { readJsonFile } from "@/app/shared/mock-helper";
 import { MockFileNames } from "@/constants";
 import { CustomerAnalytics } from "@/features/customers";
 

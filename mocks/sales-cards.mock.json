@@ -30,7 +30,7 @@
       "compareValue": "+1%",
       "compareDescription": "{{comparisonText}}"
     },
-        {
+    {
       "title": "Total Refunds",
       "value": "₹1,00,000",
       "icon": "BanknotesIcon",
@@ -62,4 +62,3 @@
     }
   ]
 }
-

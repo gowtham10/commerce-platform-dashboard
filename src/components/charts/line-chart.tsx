@@ -14,6 +14,7 @@ import { SimpleLineChartData, SimpleLineChartProps } from "./charts.interface";
 import useSWR from "swr";
 import { constructSWRKey, postFetcher } from "@/helpers";
 import { RequestType } from "../common.interface";
+import { CustomTooltip } from "./custom-label";
 
 export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
   const { data: chartData, request, filters } = props;
@@ -68,11 +69,11 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
             dy="-10"
           />
         </YAxis>
-        <Tooltip />
+        <Tooltip content={<CustomTooltip meta={meta?.tooltip} />}/>
         <Legend />
         <Line
           type="monotone"
-          dataKey={meta.valueKey || "value"}
+          dataKey={meta?.valueKey || "value"}
           stroke="#8884d8"
         />
       </LineChart>

@@ -1,4 +1,4 @@
-import { readJsonFile } from "./shared/file-helper";
+import { readJsonFile } from "./shared/mock-helper";
 import { MockFileNames } from "@/constants";
 import { Dashboard } from "@/features/dashboard";
 

@@ -1,7 +1,7 @@
 import "./globals.scss";
 import styles from "./layout.module.scss";
 import Sidebar from "@/features/sidebar";
-import { readJsonFile } from "./shared/file-helper";
+import { readJsonFile } from "./shared/mock-helper";
 import { MockFileNames } from "@/constants";
 import "react-loading-skeleton/dist/skeleton.css";
 

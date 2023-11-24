@@ -42,13 +42,11 @@ export function ProductPerformance(props: ProductProps) {
     if (storedStartDate && storedEndDate) {
       const formattedStartDate = new Date(storedStartDate);
       const formattedEndDate = new Date(storedEndDate);
-      setFilters({
+      setFilters((f: any) => ({
         startDate: formattedStartDate,
         endDate: formattedEndDate,
-        categories: storedCategories
-          ? storedCategories?.split(",")
-          : enabledCategories,
-      });
+        categories: storedCategories || f.categories,
+      }));
     }
     setShowFilters(true);
   }, []);
@@ -58,8 +56,8 @@ export function ProductPerformance(props: ProductProps) {
     endDate: Date,
   ) => {
     setFilters({ ...filters, startDate, endDate });
-    setItem(LocalStorageKeys.CUSTOMERS_START_DATE, formatDate(startDate));
-    setItem(LocalStorageKeys.CUSTOMERS_END_DATE, formatDate(endDate));
+    setItem(LocalStorageKeys.PRODUCT_START_DATE, formatDate(startDate));
+    setItem(LocalStorageKeys.PRODUCT_END_DATE, formatDate(endDate));
   };
 
   const handleCategorySelection = (selectedOptions: any) => {

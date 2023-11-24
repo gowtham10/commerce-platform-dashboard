@@ -60,6 +60,30 @@
       "totalProductsSold": 1500,
       "totalRevenue": "₹55000"
     }
-  ]
+  ],
+  "mock": {
+    "metaData": [
+      {
+        "key": "totalProductsSold",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 50,
+          "max": 250
+        }
+      },
+      {
+        "key": "totalRevenue",
+        "functionType": "DEFAULT",
+        "options": {
+          "min": 10000,
+          "max": 45000,
+          "prefix": "₹"
+        }
+      }
+    ],
+    "dataKey": "content",
+    "sort": {
+      "key": "revenue"
+    }
+  }
 }
-

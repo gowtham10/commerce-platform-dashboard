@@ -10,4 +10,7 @@ export type DefaultIconTypeProps = {
 
 export type IconFactoryTypes = DefaultIconTypeProps;
 
-export type ComponentFactoryProps = MetricDetails & {filters?: any};
+export type ComponentFactoryProps = MetricDetails & {
+  filters?: any;
+  handleLastUpdated?: (lastUpdated: string) => void;
+};

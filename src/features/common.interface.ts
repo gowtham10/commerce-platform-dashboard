@@ -9,6 +9,7 @@ export interface MetricDetails {
   data?: any;
   redirectUrl?: string;
   key?: string;
+  showLastUpdated?: boolean;
 }
 
 export type MetricContainerProps = MetricDetails & { filters?: any };

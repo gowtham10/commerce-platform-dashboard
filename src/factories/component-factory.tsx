@@ -36,6 +36,7 @@ export function ComponentFactory(props: ComponentFactoryProps) {
         data={data}
         request={request}
         filters={filters}
+        handleLastUpdated={props.handleLastUpdated}
       />;
     case ComponentTypeKeys.PIE_CHART:
       return null;

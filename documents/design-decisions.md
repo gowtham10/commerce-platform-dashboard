@@ -35,6 +35,7 @@ Layout can be found here [Layout](./layout.png)
 * `Nested navigation` is supported
 * From the `Dashboard` page, can be redirected to other dashboards by `clicking` either on the `Card or Metric`.
 * `localstorage` is included in all the pages with `seperate keys` to store the `filters`. When the page reloads the selected filters are applied. 
+* `Hourly Sales Trend` in the dashboard is updated every 30secs using `SSE`
 
 all the mock configuration and sample data can be found here [mocks](../mocks/)
 

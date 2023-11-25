@@ -1,6 +1,9 @@
 import { MockFileNames } from "@/constants";
 import { promises as fs } from "fs";
 
+const salesTrend = new Map();
+const SALES_TREND_KEY = "trends";
+
 const MILLIS_IN_A_DAY = 24 * 60 * 60 * 1000;
 
 // Comparators
@@ -85,7 +88,6 @@ const constructMockData = async (type: string, filters: any) => {
     data.sort(chooseComparator(mock?.sort?.key));
     if (mock?.sort?.order === "desc") data.reverse();
   }
-
 
   return {
     ...rest,
@@ -176,6 +178,38 @@ export function getRandomInt(min: number, max: number): number {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const constructMockHourlySales = () => {
+  const now = new Date();
+  const currentHour = now.getHours();
+  const hourlyTrend = salesTrend.get(SALES_TREND_KEY) || [] as any;
+
+  if (!salesTrend.has(SALES_TREND_KEY)) {
+    Array(currentHour + 1).fill(0).forEach((_, index) => {
+      hourlyTrend.push({
+        Hour: `${index < 10 ? `0${index}` : index}:00`,
+        Revenue: closestWholeNumber(getRandomInt(300, 5000)),
+      });
+    });
+  }
+  hourlyTrend[currentHour] = {
+    Hour: `${currentHour < 10 ? `0${currentHour}` : currentHour}:00`,
+    Revenue: closestWholeNumber(getRandomInt(300, 5000)),
+  };
+
+  salesTrend.set(SALES_TREND_KEY, hourlyTrend);
+  return hourlyTrend;
+};
+
+export async function constructSalesTrendMockData(
+  mockData: any,
+) {
+  const { meta } = mockData;
+  return {
+    meta,
+    data: constructMockHourlySales(),
+  };
 }
 
 export const constructSalesMockData = memoize(constructMockData, "sales");

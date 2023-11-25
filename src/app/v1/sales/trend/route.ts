@@ -1,16 +1,20 @@
 import {
   constructSalesTrendMockData,
-  readJsonFile,
 } from "@/app/shared/mock-helper";
-import { MockFileNames } from "@/constants";
 
 const POLLING_INTERVAL = 30000;
 
 export async function GET(req: Request) {
-  const mockData = await readJsonFile(
-    MockFileNames.HOURLY_SALES_TREND,
-  ) as any;
-
+  const mockData = {
+    "meta": {
+      "valueKey": "Revenue",
+      "xAxisLabel": "Hrs",
+      "xAxisKey": "Hour",
+      "tooltip": {
+        "prefix": "₹",
+      },
+    },
+  };
   let responseStream = new TransformStream();
   const writer = responseStream.writable.getWriter();
   const encoder = new TextEncoder();
@@ -54,3 +58,4 @@ export async function GET(req: Request) {
   });
 }
 
+export const runtime = "edge";

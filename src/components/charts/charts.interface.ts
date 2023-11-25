@@ -24,6 +24,7 @@ export type TinyBarChartProps<F> = ChartCommonProps<F> & {
 
 export type SimpleLineChartProps<F> = ChartCommonProps<F> & {
   data?: SimpleLineChartData[];
+  handleLastUpdated?: (lastUpdated: string) => void;
 };
 
 export type SimpleBarChartProps<F> = ChartCommonProps<F> & {

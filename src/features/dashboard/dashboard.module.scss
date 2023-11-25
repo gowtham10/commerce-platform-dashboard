@@ -48,6 +48,23 @@
   }
 }
 
+.metrics__header {
+  padding: 1.5rem 2rem;
+  display: flex;
+
+  &__name {
+    color: var(--dark-gray);
+    font-weight: bold;
+    flex: 1;
+  }
+
+  &__timestamp {
+    color: var(--light-gray);
+    text-align: right;
+    font-size: 0.8rem;
+  }
+}
+
 @media only screen and (max-device-width: 600px){
   .dashboard{ 
     &__header {

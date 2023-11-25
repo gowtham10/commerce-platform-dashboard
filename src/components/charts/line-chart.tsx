@@ -15,7 +15,7 @@ import { CustomTooltip } from "./custom-label";
 import { useEffect, useState } from "react";
 
 export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
-  const { data: chartData, request, filters } = props;
+  const { data: chartData, request, handleLastUpdated } = props;
   const [data, setData] = useState<any | null>(
     chartData as any | null,
   );
@@ -24,6 +24,7 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
     const eventSource = new EventSource(request?.path as string);
     eventSource.onmessage = (e) => {
       e.data && setData(JSON.parse(e.data));
+      handleLastUpdated && handleLastUpdated(new Date().toLocaleTimeString());
     };
 
     return () => {

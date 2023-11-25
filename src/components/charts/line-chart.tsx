@@ -11,33 +11,38 @@ import {
 } from "recharts";
 import { BarChartSkeleton } from "./bar-skeleton";
 import { SimpleLineChartData, SimpleLineChartProps } from "./charts.interface";
-import useSWR from "swr";
-import { constructSWRKey, postFetcher } from "@/helpers";
-import { RequestType } from "../common.interface";
 import { CustomTooltip } from "./custom-label";
+import { useEffect, useState } from "react";
 
 export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
   const { data: chartData, request, filters } = props;
-
-  const { data: fetchedData } = useSWR(
-    !chartData
-      ? constructSWRKey<F>(filters as F, request as RequestType)
-      : null,
-    postFetcher,
+  const [data, setData] = useState<any | null>(
+    chartData as any | null,
   );
 
-  if (!chartData && !fetchedData) {
+  useEffect(() => {
+    const eventSource = new EventSource(request?.path as string);
+    eventSource.onmessage = (e) => {
+      e.data && setData(JSON.parse(e.data));
+    };
+
+    return () => {
+      eventSource.close();
+    };
+  }, []);
+
+  if (!data) {
     return <BarChartSkeleton />;
   }
 
-  const { data, meta } = chartData || fetchedData as any || {};
+  const { meta } = data;
 
   return (
     <ResponsiveContainer width="100%" height="100%">
       <LineChart
         width={500}
         height={300}
-        data={data as SimpleLineChartData[]}
+        data={data?.data as SimpleLineChartData[]}
         margin={{
           top: 5,
           right: 30,
@@ -55,7 +60,7 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
             style={{ fontSize: "0.75rem" }}
             value={meta?.xAxisLabel || ""}
             stroke="#808e9b"
-            position={{x: -30, y: 40}}
+            position={{ x: -30, y: 40 }}
             dy="-10"
           />
         </XAxis>
@@ -69,7 +74,7 @@ export function SimpleLineChart<F>(props: SimpleLineChartProps<F>) {
             dy="-10"
           />
         </YAxis>
-        <Tooltip content={<CustomTooltip meta={meta?.tooltip} />}/>
+        <Tooltip content={<CustomTooltip meta={meta?.tooltip} />} />
         <Legend />
         <Line
           type="monotone"

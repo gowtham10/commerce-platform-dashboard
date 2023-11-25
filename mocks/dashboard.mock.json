@@ -45,7 +45,7 @@
       "type": "LINE_CHART",
       "redirectUrl": "/sales/overview",
       "request": {
-        "path": "/v1/sales",
+        "path": "/v1/sales/trend",
         "method": "POST",
         "polling": "SSE",
         "payload": {

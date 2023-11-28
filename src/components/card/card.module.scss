@@ -161,3 +161,14 @@
     display: flex;
   }
 }
+
+@media only screen and (max-device-width: 480px){
+  .smallcard {
+    width: 325px;
+  }
+
+  .skeleton-container {
+    width: 325px;
+  }
+}
+

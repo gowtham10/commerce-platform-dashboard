@@ -77,6 +77,11 @@ export function ProductPerformance(props: ProductProps) {
         {showFilters &&
           (
             <div className={styles["products__filters"]}>
+              <RangeDatePicker
+                initialStartDate={filters?.startDate}
+                initialEndDate={filters?.endDate}
+                handleDateChange={handleDateChange}
+              />
               <SimpleControlSelect
                 options={allCategories}
                 initialSelectedOptions={filterSelectedOptions(
@@ -93,11 +98,6 @@ export function ProductPerformance(props: ProductProps) {
                   IndicatorsContainer: getIndicatorsContainer(),
                   DropdownIndicator: getDropdownIndicator(),
                 }}
-              />
-              <RangeDatePicker
-                initialStartDate={filters?.startDate}
-                initialEndDate={filters?.endDate}
-                handleDateChange={handleDateChange}
               />
             </div>
           )}

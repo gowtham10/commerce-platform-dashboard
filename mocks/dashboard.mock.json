@@ -24,9 +24,7 @@
   "enabledMetricKeys": [
     "HOURLY_SALES_TREND",
     "LAST_10_DAYS_REVENUE",
-    "TOP_PRODUCTS",
-    "TOP_CUSTOMERS",
-    "RECENT_ORDERS"
+    "TOP_PRODUCTS"
   ],
   "cards": {
     "request": {

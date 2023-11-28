@@ -37,3 +37,7 @@ Product note and Design can be found here
 
 * [Prouduct Note](./documents/product-note.md)
 * [Design](./documents/design-decisions.md)
+
+## Deploy to Google Cloud Run
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)

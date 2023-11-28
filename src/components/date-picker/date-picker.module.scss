@@ -30,3 +30,12 @@
     gap: 5px;
   }
 }
+
+@media only screen and (max-device-width: 480px){
+  .picker {
+    &__container {
+      right: -150px;
+    }
+  }
+}
+

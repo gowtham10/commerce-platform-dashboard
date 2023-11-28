@@ -55,7 +55,7 @@ export function Dashboard(props: DashboardProps) {
           <PageHeader title="Dashboard" />
         </div>
         {showFilters && (
-          <div data-test-id="simple-select">
+          <div data-test-id="filters">
             <SimpleControlSelect
               options={allMetricOptions}
               initialSelectedOptions={filterSelectedOptions(

@@ -64,6 +64,7 @@ export function SmallCard(props: SmallCardProps) {
 
   return (
     <div
+      data-test-id='card'
       className={`${
         commonStyles[redirectUrl ? "cursor-pointer" : "cursor-default"]
       } ${styles.smallcard}`}

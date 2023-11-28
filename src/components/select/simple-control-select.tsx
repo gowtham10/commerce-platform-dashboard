@@ -38,29 +38,31 @@ export function SimpleControlSelect(props: SimpleControlSelectProps) {
       boxShadow: state.isFocused ? 0 : 0,
       "&:hover": {
         border: state.isFocused ? "none" : "none",
-      }
+      },
     }),
   };
 
   return (
-    <Select
-      closeMenuOnSelect={false}
-      hideSelectedOptions={false}
-      onChange={(options) => {
-        if (Array.isArray(options)) {
-          setSelectedOptions(options.map((opt) => opt.value));
-        }
-        handleChange(options);
-      }}
-      isClearable={isClearable}
-      isSearchable={isSearchable}
-      defaultValue={selectedOptions}
-      isMulti
-      name="colors"
-      options={options}
-      controlShouldRenderValue={true}
-      components={customComponents}
-      styles={colourStyles}
-    />
+    <div data-test-id="simple-select">
+      <Select
+        closeMenuOnSelect={false}
+        hideSelectedOptions={false}
+        onChange={(options) => {
+          if (Array.isArray(options)) {
+            setSelectedOptions(options.map((opt) => opt.value));
+          }
+          handleChange(options);
+        }}
+        isClearable={isClearable}
+        isSearchable={isSearchable}
+        defaultValue={selectedOptions}
+        isMulti
+        name="colors"
+        options={options}
+        controlShouldRenderValue={true}
+        components={customComponents}
+        styles={colourStyles}
+      />
+    </div>
   );
 }

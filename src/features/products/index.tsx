@@ -76,7 +76,7 @@ export function ProductPerformance(props: ProductProps) {
         </div>
         {showFilters &&
           (
-            <div className={styles["products__filters"]}>
+            <div data-test-id="filters" className={styles["products__filters"]}>
               <RangeDatePicker
                 initialStartDate={filters?.startDate}
                 initialEndDate={filters?.endDate}

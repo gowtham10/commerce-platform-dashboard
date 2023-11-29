@@ -42,16 +42,16 @@ export function SalesOverview(props: SalesProps) {
         <div>
           <PageHeader title="Sales Overview" />
         </div>
-        <div>
-          {showFilters &&
-            (
+        {showFilters &&
+          (
+            <div data-test-id="filters">
               <RangeDatePicker
                 handleDateChange={handleDateChange}
                 initialStartDate={filters?.startDate}
                 initialEndDate={filters?.endDate}
               />
-            )}
-        </div>
+            </div>
+          )}
       </div>
       <div className={styles["sales__content"]}>
         <div className={styles["sales__row"]}>

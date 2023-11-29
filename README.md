@@ -37,6 +37,7 @@ Product note and Design can be found here
 
 * [Prouduct Note](./documents/product-note.md)
 * [Design](./documents/design-decisions.md)
+* [Test Report](./e2e-report.html)
 
 ## Deploy to Google Cloud Run
 

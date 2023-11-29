@@ -10,10 +10,18 @@ const chrome = require("selenium-webdriver/chrome");
 
 defineParameterType({
   regexp: /(dashboard|sales|products|customers|analytics)/,
-  transformer: function(pageName) {
+  transformer: function (pageName) {
     return this.path(pageName);
   },
   name: "path",
+});
+
+defineParameterType({
+  regexp: /(salesCard|ordersCard|customersCard)/,
+  transformer: function (card) {
+    return this.cardIndex(card);
+  },
+  name: "card",
 });
 
 class DashboardWorld extends World {
@@ -49,6 +57,19 @@ class DashboardWorld extends World {
         return "customers/analytics";
       default:
         return "";
+    }
+  }
+
+  cardIndex(card) {
+    switch (card) {
+      case "salesCard":
+        return 0;
+      case "ordersCard":
+        return 1;
+      case "customersCard":
+        return 2;
+      default:
+        return 0;
     }
   }
 }

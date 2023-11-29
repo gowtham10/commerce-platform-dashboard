@@ -42,16 +42,16 @@ export function CustomerAnalytics(props: CustomerProps) {
         <div>
           <PageHeader title="Customer Analytics" />
         </div>
-        <div>
-          {showFilters &&
-            (
+        {showFilters &&
+          (
+            <div data-test-id="filters">
               <RangeDatePicker
                 initialStartDate={filters.startDate}
                 initialEndDate={filters.endDate}
                 handleDateChange={handleDateChange}
               />
-            )}
-        </div>
+            </div>
+          )}
       </div>
       <div className={styles["customers__content"]}>
         <div className={styles["customers__row"]}>
